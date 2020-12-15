@@ -1,0 +1,25 @@
+/*
+ Theme Name:   MANEHOME
+ Theme URI:    https://acwd.fr
+ Description:  Thème Tech Smarter ACWD
+ Author:       ACWD
+ Author URI:   https://acwd.fr
+ Template:     acwd
+ Version:      1.0.0
+*/
+
+.custom-logo-link img {
+	max-height: 150px;
+	width: auto;
+}
+#nav-bar-toggle
+{
+	top: 15px;
+	right: 15px;
+	z-index: 60;
+}
+.social-mobile
+{
+	left:0;
+	top: 15px;
+}
