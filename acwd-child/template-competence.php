@@ -46,8 +46,10 @@ get_template_part( 'template-parts/content', 'header');
 							</div>
 						<?php endwhile; endif; ?>
 							<div class="col-6">
-								<?php $img_last = get_field('dernier_bloc'); ?>
-								<img src="<?php echo $img_last['url'] ?>" alt="<?php echo $img_last['alt'] ?>">
+								<div class="row m-3 justify-content-center align-items-center">
+									<?php $img_last = get_field('dernier_bloc'); ?>
+									<img src="<?php echo $img_last['url'] ?>" alt="<?php echo $img_last['alt'] ?>">
+								</div>
 							</div>
 						</div>
 					</section>
