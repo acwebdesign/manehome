@@ -25,13 +25,13 @@ get_header();
 								<?php if (have_rows('slider')):
 									while (have_rows('slider')): the_row(); ?>
 										<div class="carousel-item <?php echo (get_row_index() == 1)? "active" : "" ?>">
-											<?php $slider_img = get_sub_field('image_de_fond')?>
-											<img class="d-block w-100" src="<?php echo $slider_img['url'] ?>" alt="<?php echo $slider_img['alt'] ?>">
-											<div class="">
+											<div class="position-absolute z-index-1 d-flex flex-column" style="top: 40%; left: 10%;">
 												<span><?php echo get_sub_field('titre_noir')?></span>
 												<span><?php echo get_sub_field('titre_blanc')?></span>
 												<a href="<?php echo get_sub_field('lien_bouton') ?>"><?php echo get_sub_field('texte_bouton') ?></a>
 											</div>
+											<?php $slider_img = get_sub_field('image_de_fond')?>
+											<img class="d-block w-100" src="<?php echo $slider_img['url'] ?>" alt="<?php echo $slider_img['alt'] ?>">
 										</div>
 								<?php endwhile; endif; ?>
 						  </div>
