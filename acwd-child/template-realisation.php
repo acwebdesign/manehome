@@ -16,6 +16,8 @@ get_header();
 get_template_part( 'template-parts/content', 'header');
 ?>
 <section class="container">
+	<h1><?php echo get_field('titre_realisations') ?></h1>
+	<div class="chapo"><?php echo get_field('chapo_realisations') ?></div>
 	<div class="row">
 		<?php if (have_rows('blocs_realisations')):
 			while (have_rows('blocs_realisations')): the_row(); ?>
