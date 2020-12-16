@@ -21,8 +21,8 @@
 
 <body <?php body_class(); ?> id="page-top">
 <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
-    <div class="container  justify-content-center justify-content-lg-around">
-        <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php the_custom_logo(); ?></a>
+    <div class="container rox align-items-center justify-content-center justify-content-lg-around">
+        <?php the_custom_logo(); ?>
         <button class="navbar-toggler navbar-toggler-right position-absolute" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation" id="nav-bar-toggle">
@@ -33,7 +33,7 @@
         wp_nav_menu(array(
                 'menu' => 'primary',
                 'theme_location' => 'menu-1',
-                // 'depth'             => 2,
+                'depth'             => 2,
                 'container' => 'div',
                 'container_id' => 'navbarResponsive',
                 'container_class' => 'collapse navbar-collapse',
