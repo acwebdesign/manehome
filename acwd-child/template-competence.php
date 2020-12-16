@@ -16,14 +16,6 @@ get_header();
 get_template_part( 'template-parts/content', 'header');
 ?>
 
-        <div class="container-fluid px-0">
-					<section class="bandeau">
-						<img src="" alt="">
-						<div class="">
-							<span></span>
-							<span></span>
-						</div>
-					</section>
 					<section class="container">
 						<h1><?php echo get_field('titre_competences') ?></h1>
 						<p class="chapo"><?php echo get_field('chapo_competences') ?></p>
@@ -54,7 +46,6 @@ get_template_part( 'template-parts/content', 'header');
 						</div>
 					</section>
 					<?php get_template_part( 'template-parts/chiffres-cles'); ?>
-        </div>
 
 
 <?php
