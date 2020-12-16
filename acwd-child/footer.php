@@ -14,74 +14,71 @@
 </div><!-- #content -->
 
 
-<footer class="bg-black small text-center text-white-50">
-    <div class="container">
-        <div class="row"></div>
-
-        <div class="col-12 col-md-2 mx-auto">
-            <div>
-                <img class="w-100" src="<?php the_field('logo_footer', 'option'); ?>"/>
+<footer class="bg-dark small text-white">
+    <div class="container pt-5 border-bottom border-secondary">
+        <div class="row">
+          <div class="col-3">
+            <img class="mb-3" src="<?php echo get_field('logo_footer', 'option')['url']; ?>" alt="<?php echo get_field('logo_footer', 'option')['alt']; ?>"/>
+            <div class="d-flex flex-column">
+              <span><?php echo get_theme_mod('company_address') ?></span>
+              <div class="">
+                <span><?php echo get_theme_mod('company_zipcode') ?></span>
+                <span><?php echo get_theme_mod('company_city') ?></span>
+              </div>
+              <a href="tel:+33<?php echo substr(str_replace(' ', '', get_theme_mod('company_phone')), 1)?>"><?php echo get_theme_mod('company_phone')?></a>
             </div>
-        </div>
-        <section class="contact-section pt-0">
-            <div class="container">
-                <div class="social d-flex justify-content-center pb-2 mt-3">
-                    <a href="<?php echo get_theme_mod( 'facebook' ); ?>" class="mx-2">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="<?php echo get_theme_mod( 'instagram' ); ?>" class="mx-2">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="<?php echo get_theme_mod( 'linkedin' ); ?>" class="mx-2">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <div class="row justify-content-center">
+          </div>
+          <div class="col-3">
+            <span>Useful links</span>
             <?php
             wp_nav_menu(array(
                 'menu' => 'quatertiary',
                 'theme_location' => 'menu-4',
-                'container_class'   => 'col-6 col-sm-8 col-md-6',
-                'menu_class' => 'footer-menu bottom d-flex justify-content-around list-unstyled flex-wrap flex-column flex-md-row',
+                'menu_class' => 'footer-menu bottom d-flex list-unstyled flex-wrap flex-column mt-3'
             ));
             ?>
-        </div>
-        <div class="row justify-content-center">
-            <?php
-            echo !empty(get_theme_mod('company_name')) ? '<p>' . get_theme_mod('company_name') . ' </p>' : '';
-            ?>
-            &nbsp;
-            -
-            &nbsp;
-            <?php
-                  echo !empty(get_theme_mod('company_address')) ? '<p>' . get_theme_mod('company_address') . ' </p> &nbsp;' : '';
-                  echo !empty(get_theme_mod('company_zipcode')) ? '<p>' . get_theme_mod('company_zipcode') . ' </p> &nbsp;' : '';
-                echo !empty(get_theme_mod('company_city')) ? '<p>' . get_theme_mod('company_city') . ' </p>' : '';
-            ?>
-        </div>
-        <div class="row justify-content-center">
+          </div>
+          <div class="col-3">
+            <span>Suivez-nous!</span>
+            <div class="social d-flex pb-2 mt-3">
+                <a href="<?php echo get_theme_mod( 'facebook' ); ?>" class="mx-2">
+                    <i class="fab fa-facebook-square fa-2x"></i>
+                </a>
+                <a href="<?php echo get_theme_mod( 'instagram' ); ?>" class="mx-2">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <span>Newsletter</span>
+            <div class="mt-3">
+              <p>Recevez toutes nos actualités</p>
+              <form method="post">
+                <div class="row px-3">
+                  <input class="border-0 rounded-left px-3 py-2" type="text" name="mail" value="" placeholder="Entrez votre Email">
+                  <button class="bg-warning border-0 rounded-right px-3 py-2" type="submit"><i class="far fa-paper-plane text-white"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
 
-            <?php
-
-            echo !empty(get_theme_mod('company_phone')) ? '<a href="tel:+33'.substr(str_replace(' ', '', get_theme_mod('company_phone')), 1).'">' . get_theme_mod('company_phone') . '</a> &nbsp; - &nbsp;' : '';
-            echo !empty(get_theme_mod('company_mobile')) ? '<a href="tel:+33'.substr(str_replace(' ', '', get_theme_mod('company_phone')), 1).'">' . get_theme_mod('company_mobile') . '</a> &nbsp;' : '';
-            echo !empty(get_theme_mod('company_email')) ? '<a href="mailto:'.get_theme_mod('company_email').'">' . get_theme_mod('company_email') . '</a> &nbsp;' : '';
-            echo !empty(get_theme_mod('company_lat')) ? '<p>' . get_theme_mod('company_lat') . '</p> &nbsp;' : '';
-            echo !empty(get_theme_mod('company_long')) ? '<p>' . get_theme_mod('company_long') . '</p> &nbsp; - &nbsp;' : '';
-            /*echo !empty(get_theme_mod('company_designer')) ? '<p>' . get_theme_mod('company_designer') . '</p>' : '';*/
-            ?>
         </div>
+
+    </div>
+        <!-- echo !empty(get_theme_mod('company_email')) ? '<a href="mailto:'.get_theme_mod('company_email').'">' . get_theme_mod('company_email') . '</a> &nbsp;' : ''; -->
+    <div class="container py-3 text-white-50">
         <div class="row">
-            <div class="col-12">
+            <div class="col-4 text-left">
                 Copyright &copy; <?php echo date('Y'); ?> - <?php bloginfo('name'); ?>
                 - <?php _e('Tous droits réservés', 'acwd'); ?>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
+            <div class="col-4 text-center">
                 <?php _e('Réalisation', 'acwd'); ?> <a href="https://acwd.fr">ACWD</a>
+            </div>
+            <div class="col-4 text-right">
+                <a href="#">Politique de confidentialité</a>
+                -
+                <a href="#">Mentions légales</a>
             </div>
         </div>
     </div>
