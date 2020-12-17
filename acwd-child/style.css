@@ -35,3 +35,163 @@
 		align-items: center;
 
 }
+
+/* Home */
+h2{
+	font-size: 2em;
+	font-weight: bold;
+}
+.small-title{
+	text-transform: uppercase;
+	color: grey;
+	font-size: 1em;
+}
+
+.triangle{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 30vw 20vw 0 0;
+	border-color: #ffc107 transparent transparent transparent;
+}
+
+.slider-black{
+	color: black;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.slider-white{
+	color: white;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.btn{
+	color: white;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+.btn:hover{
+	color: white;
+	text-decoration: none;
+}
+
+.flip {
+  -webkit-perspective: 800;
+          perspective: 800;
+        position: relative;
+}
+.flip:hover .card{
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+}
+.flip .card {
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    background-color: #fff;
+
+}
+.flip .card .face {
+  -webkit-backface-visibility: hidden ;
+    backface-visibility: hidden ;
+   z-index: 2;
+	 width: 100%;
+}
+.flip .card .img {
+   position: relaitve;
+   z-index: 1;
+   border: 2px solid #000;
+}
+.flip .card .back {
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+  position: absolute;
+}
+.inner{
+  margin:0px !important;
+}
+.inner p{
+	width: 90%;
+	color: white;
+	font-weight: bold;
+}
+
+.realisations-item{
+		font-weight: bold;
+		list-style-type: none;
+}
+.realisations-item a{
+	color: grey !important;
+}
+
+.realisations-item a:hover{
+		list-style-type: none;
+		text-decoration: none;
+}
+
+.realisations-img{
+	position: absolute;
+	background-color: grey;
+	box-shadow: 0px 0px 10px rgb(0, 0, 0, .6);
+	height: 350px;
+	width: 250px;
+}
+
+.bg-clip,
+.clip-path-left,
+.clip-path-center,
+.clip-path-right{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.clip-path-left{
+	clip-path: polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%);
+	background-color: rgb(0, 0, 0, .1);
+	width: 100%;
+	height: 100%;
+}
+
+.clip-path-center{
+	clip-path: polygon(40% 25%, 55% 25%, 40% 100%, 25% 100%);
+	background-color: rgb(0, 0, 0, .05);
+	width: 100%;
+	height: 100%;
+}
+
+.clip-path-right{
+	clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 70% 100%);
+	background-color: rgb(0, 0, 0, .1);
+	width: 100%;
+	height: 100%;
+}
+
+.foryou-black{
+	color: black;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.foryou-white{
+	color: white;
+	font-weight: bold;
+	font-size: 3em;
+}
+
+.foryou-text{
+	color: grey;
+	font-weight: bold;
+	font-size: 1em;
+}

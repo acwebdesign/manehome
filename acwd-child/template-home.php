@@ -19,16 +19,21 @@ get_header();
 		<main id="main" class="site-main">
 
         <div class="container-fluid px-0">
-					<section class="slider">
+					<section class="slider mb-5">
+						<div class="triangle"></div>
 						<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 						  <div class="carousel-inner">
 								<?php if (have_rows('slider')):
 									while (have_rows('slider')): the_row(); ?>
 										<div class="carousel-item <?php echo (get_row_index() == 1)? "active" : "" ?>">
-											<div class="position-absolute z-index-1 d-flex flex-column" style="top: 40%; left: 10%;">
-												<span><?php echo get_sub_field('titre_noir')?></span>
-												<span><?php echo get_sub_field('titre_blanc')?></span>
-												<a href="<?php echo get_sub_field('lien_bouton') ?>"><?php echo get_sub_field('texte_bouton') ?></a>
+											<div class="position-absolute z-index-1" style="top: 40%; left: 20%;">
+												<div class="d-flex flex-column mb-5">
+													<span class="slider-black"><?php echo get_sub_field('titre_noir')?></span>
+													<span class="slider-white"><?php echo get_sub_field('titre_blanc')?></span>
+												</div>
+												<div class="">
+													<a class="btn py-3 px-5 rounded bg-warning" href="<?php echo get_sub_field('lien_bouton') ?>"><?php echo get_sub_field('texte_bouton') ?></a>
+												</div>
 											</div>
 											<?php $slider_img = get_sub_field('image_de_fond')?>
 											<img class="d-block w-100" src="<?php echo $slider_img['url'] ?>" alt="<?php echo $slider_img['alt'] ?>">
@@ -37,59 +42,85 @@ get_header();
 						  </div>
 						</div>
 					</section>
-					<section class="container maitrise-expertise">
+					<section class="container maitrise-expertise py-5 my-5">
 						<div class="row">
-							<div class="col-6">
+							<div class="col-6 px-5">
 								<div class="row">
 									<?php if (have_rows('blocs_maitrise')):
 										while (have_rows('blocs_maitrise')): the_row(); ?>
 										<div class="col-6">
-											<?php $bg_img = get_sub_field('bg_img')?>
-											<img src="<?php echo $bg_img['url'] ?>" alt="<?php echo $bg_img['alt'] ?>" width="100%">
-											<?php $bg_img_hover = get_sub_field('bg_img_hover')?>
-											<img src="<?php echo $bg_img_hover['url'] ?>" alt="<?php echo $bg_img_hover['alt'] ?>" width="100%">
-											<p><?php echo get_sub_field('texte_au_survol') ?></p>
+											<div class="flip my-3">
+												<div class="card">
+													<div class="face front">
+														<div class="inner">
+															<?php $bg_img = get_sub_field('bg_img')?>
+															<img src="<?php echo $bg_img['url'] ?>" alt="<?php echo $bg_img['alt'] ?>" width="100%">														</div>
+													</div>
+													<div class="face back">
+														<div class="inner row justify-content-center align-items-center">
+															<p class="position-absolute text-center"><?php echo get_sub_field('texte_au_survol') ?></p>
+															<?php $bg_img_hover = get_sub_field('bg_img_hover')?>
+															<img src="<?php echo $bg_img_hover['url'] ?>" alt="<?php echo $bg_img_hover['alt'] ?>" width="100%">
+														</div>
+												</div>
+											</div>
 										</div>
+									</div>
 									<?php endwhile; endif; ?>
 								</div>
 							</div>
-							<div class="col-6">
-								<span><?php echo get_field('titre_maitrise') ?></span>
-								<h2><?php echo get_field('sous_titre_maitrise') ?></h2>
+							<div class="col-6 px-5 d-flex flex-column justify-content-center">
+								<span class="small-title pb-3"><?php echo get_field('titre_maitrise') ?></span>
+								<h2 class="pb-2"><?php echo get_field('sous_titre_maitrise') ?></h2>
 								<p><?php echo get_field('texte_maitrise') ?></p>
-								<a href="<?php echo get_field('lien_du_bouton_maitrise') ?>"><?php echo get_field('texte_du_bouton_maitrise') ?></a>
+								<div class="py-5">
+									<a class="btn py-3 px-5 rounded bg-warning" href="<?php echo get_field('lien_du_bouton_maitrise') ?>"><?php echo get_field('texte_du_bouton_maitrise') ?></a>
+								</div>
 							</div>
 						</div>
 					</section>
-					<section class="container realisations">
-						<div class="row">
-							<div class="col-6">
-								<span><?php echo get_field('titre_projets') ?></span>
-								<h3><?php echo get_field('sous_titre_projets') ?></h3>
+					<section class="position-relative realisations py-3 my-5">
+						<div class="container my-5">
+							<div class="row">
+							<div class="col-7 py-5 d-flex flex-column">
+								<span class="small-title pb-3"><?php echo get_field('titre_projets') ?></span>
+								<h2 class="pb-5"><?php echo get_field('sous_titre_projets') ?></h3>
 								<ul>
 									<?php if (have_rows('realisations')):
 										while (have_rows('realisations')): the_row(); ?>
-										<li><a href="<?php echo get_sub_field('lien')?>"><?php echo get_sub_field('titre')?></a></li>
+										<li class="realisations-item my-3"><a href="<?php echo get_sub_field('lien')?>"><?php echo get_sub_field('titre')?></a></li>
 									<?php endwhile; endif; ?>
 								</ul>
 							</div>
-							<div class="col-6">
-								<div class="row">
-									<img style="background-color: grey; box-shadow: 0px 0px 10px rgb(0, 0, 0, .6); height: 200px; width: 200px;" src="" alt="" >
-									<img style="background-color: grey; box-shadow: 0px 0px 10px rgb(0, 0, 0, .6); height: 200px; width: 200px;"  src="" alt="">
+							<div class="col-5">
+								<div class="position-relative" style="height: 100%">
+									<img class="realisations-img" style="bottom: 0; left: 0;" src="" alt="" >
+									<img class="realisations-img" style="top: 0; right: 0;"src="" alt="">
 								</div>
 							</div>
 						</div>
+						</div>
+						<div class="bg-clip">
+							<div class="position-relative" style="height: 100%;">
+								<div class="clip-path-left"></div>
+								<div class="clip-path-center"></div>
+								<div class="clip-path-right"></div>
+							</div>
+						</div>
 					</section>
-					<section class="container manehome-for-you">
-						<div class="" style="background-color : GoldenRod">
-							<span><?php echo get_field('titre_noir_for_you') ?></span>
-							<span><?php echo get_field('titre_blanc_for_you') ?></span>
-							<?php $logo_foryou = get_field('logo_for_you')?>
-							<img class="logo-for-you" src="<?php echo $logo_foryou['url'] ?>" alt="<?php echo $logo_foryou['alt'] ?>">
-							<p><?php echo get_field('texte_manehome_for_you') ?></p>
+					<section class="container manehome-for-you py-5 my-5">
+						<div class="bg-warning position-relative row align-items-center pl-5">
+							<div class="col-6 position-absolute pl-5 pb-5">
+								<div class="pl-3 row align-items-end flex-nowrap pb-3">
+									<span class="foryou-black pb-2 pr-2"><?php echo get_field('titre_noir_for_you') ?></span>
+									<span class="foryou-white pr-2"><?php echo get_field('titre_blanc_for_you') ?></span>
+									<?php $logo_foryou = get_field('logo_for_you')?>
+									<img class="logo-for-you" src="<?php echo $logo_foryou['url'] ?>" alt="<?php echo $logo_foryou['alt'] ?>" width="25%">
+								</div>
+									<p class="foryou-text pr-5"><?php echo get_field('texte_manehome_for_you') ?></p>
+							</div>
 							<?php $bg_img_foryou = get_field('image_fond_for_you')?>
-							<img class="bg-img" src="<?php echo $bg_img_foryou['url'] ?>" alt="<?php echo $bg_img_foryou['alt'] ?>" width="100%">
+							<img class="bg-img ml-auto" src="<?php echo $bg_img_foryou['url'] ?>" alt="<?php echo $bg_img_foryou['alt'] ?>" width="65%">
 						</div>
 					</section>
         </div>
