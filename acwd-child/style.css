@@ -82,6 +82,31 @@ h2{
 	text-decoration: none;
 }
 
+.dots-left,
+.dots-right{
+	position: absolute;
+	width: 3em;
+}
+
+.dots-left{
+	left : -3em;
+	margin-top: 6em;
+}
+
+.dots-right{
+	right : -3em;
+	bottom: 0;
+	margin-bottom: 6em;
+}
+
+.dot{
+	width: .2em;
+	height: .2em;
+	border-radius: 50%;
+	background-color: lightgray;
+	margin: .4em;
+}
+
 .flip {
   -webkit-perspective: 800;
           perspective: 800;
@@ -194,4 +219,42 @@ h2{
 	color: grey;
 	font-weight: bold;
 	font-size: 1em;
+}
+
+
+/* footer */
+
+footer{
+	font-weight: bold !important;
+}
+
+footer a:hover{
+	text-decoration: none;
+}
+
+.footer-title{
+	text-transform: uppercase;
+	font-size: 1em;
+}
+
+footer ul{
+	padding: 0;
+}
+
+footer li{
+	list-style: none;
+	margin: .5em 0;
+}
+
+.lien-footer,
+footer li a{
+	color: grey;
+}
+
+.lien-footer:hover,
+footer li a:hover{
+	color: grey;
+}
+footer a:hover{
+	opacity: .5;
 }

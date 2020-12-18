@@ -20,8 +20,8 @@
 </head>
 
 <body <?php body_class(); ?> id="page-top">
-<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
-    <div class="container rox align-items-center justify-content-center justify-content-lg-around">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink p-0" id="mainNav">
+    <div class="container row align-items-center justify-content-center justify-content-lg-around mx-auto">
         <?php the_custom_logo(); ?>
         <button class="navbar-toggler navbar-toggler-right position-absolute" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -37,16 +37,16 @@
                 'container' => 'div',
                 'container_id' => 'navbarResponsive',
                 'container_class' => 'collapse navbar-collapse',
-                'menu_class' => 'navbar-nav ml-auto',
+                'menu_class' => 'navbar-nav w-100 justify-content-around',
                 'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
                 'walker' => new WP_Bootstrap_Navwalker())
         );
         ?>
         <div class="social col-auto d-lg-flex justify-content-center pb-2 mt-3 mx-auto  d-none">
-            <a href="#" class="mx-2">
+            <a href="#" class="d-flex align-items-center mx-2">
                 <i class="fas fa-search"></i>
             </a>
-            <a href="" class="btn btn-secondary">Contactez-nous</a>
+            <a href="https://v3.manehome.fr/contact/" class="btn btn-secondary">Contactez-nous</a>
         </div>
 
         <!-- <div class="social social-mobile col-12 col-md-auto d-flex justify-content-center pb-2 mt-3 mx-auto flex-column flex-lg-row position-absolute d-lg-none">
