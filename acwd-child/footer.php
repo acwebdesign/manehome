@@ -25,32 +25,32 @@
                 <span><?php echo get_theme_mod('company_zipcode') ?></span>
                 <span><?php echo get_theme_mod('company_city') ?></span>
               </div>
-              <a href="tel:+33<?php echo substr(str_replace(' ', '', get_theme_mod('company_phone')), 1)?>"><?php echo get_theme_mod('company_phone')?></a>
+              <a class="text-warning" href="tel:+33<?php echo substr(str_replace(' ', '', get_theme_mod('company_phone')), 1)?>"><?php echo get_theme_mod('company_phone')?></a>
             </div>
           </div>
-          <div class="col-3">
-            <span>Useful links</span>
+          <div class="col-3 pt-3">
+            <span class="footer-title">Useful links</span>
             <?php
             wp_nav_menu(array(
                 'menu' => 'quatertiary',
                 'theme_location' => 'menu-4',
-                'menu_class' => 'footer-menu bottom d-flex list-unstyled flex-wrap flex-column mt-3'
+                'menu_class' => 'footer-menu bottom d-flex flex-wrap flex-column mt-2'
             ));
             ?>
           </div>
-          <div class="col-3">
-            <span>Suivez-nous!</span>
+          <div class="col-3 pt-3">
+            <span class="footer-title">Suivez-nous!</span>
             <div class="social d-flex pb-2 mt-3">
-                <a href="<?php echo get_theme_mod( 'facebook' ); ?>" class="mx-2">
-                    <i class="fab fa-facebook-square fa-2x"></i>
+                <a href="<?php echo get_theme_mod( 'facebook' ); ?>" class="mr-3">
+                    <i class="fab fa-facebook-square fa-2x text-white"></i>
                 </a>
-                <a href="<?php echo get_theme_mod( 'instagram' ); ?>" class="mx-2">
-                    <i class="fab fa-instagram fa-2x"></i>
+                <a href="<?php echo get_theme_mod( 'instagram' ); ?>" class="mr-3">
+                    <i class="fab fa-instagram fa-2x text-white"></i>
                 </a>
             </div>
           </div>
-          <div class="col-3">
-            <span>Newsletter</span>
+          <div class="col-3 pt-3">
+            <span class="footer-title">Newsletter</span>
             <div class="mt-3">
               <p>Recevez toutes nos actualités</p>
               <form method="post">
@@ -68,17 +68,17 @@
         <!-- echo !empty(get_theme_mod('company_email')) ? '<a href="mailto:'.get_theme_mod('company_email').'">' . get_theme_mod('company_email') . '</a> &nbsp;' : ''; -->
     <div class="container py-3 text-white-50">
         <div class="row">
-            <div class="col-4 text-left">
+            <div class="col-4 text-left p-0">
                 Copyright &copy; <?php echo date('Y'); ?> - <?php bloginfo('name'); ?>
                 - <?php _e('Tous droits réservés', 'acwd'); ?>
             </div>
-            <div class="col-4 text-center">
-                <?php _e('Réalisation', 'acwd'); ?> <a href="https://acwd.fr">ACWD</a>
+            <div class="col-4 text-center p-0">
+                <?php _e('Réalisation', 'acwd'); ?> <a class="lien-footer"  href="https://acwd.fr">ACWD</a>
             </div>
-            <div class="col-4 text-right">
-                <a href="#">Politique de confidentialité</a>
+            <div class="col-4 text-right p-0">
+                <a href="#" class="lien-footer" >Politique de confidentialité</a>
                 -
-                <a href="#">Mentions légales</a>
+                <a href="#" class="lien-footer" >Mentions légales</a>
             </div>
         </div>
     </div>
