@@ -13,7 +13,7 @@
  */
 
 get_header();
-get_template_part( 'template-parts/content', 'header');
+get_template_part( 'template-parts/content', 'header_black');
 ?>
 					<section class="container py-5">
 						<h1 class="pb-5"><?php echo get_field('titre_maitriser') ?></h1>

@@ -4,7 +4,7 @@ nav
 }
 nav .navbar-nav
 {
-  height: 80px;
+  height: 100px;
   align-items: center;
 }
 nav .navbar-nav .menu-item
@@ -12,14 +12,20 @@ nav .navbar-nav .menu-item
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  padding: 5px;
 }
 
 nav .menu-item a
 {
   color: #222222;
-  font-size: 1rem!important;
+  font-size: 0.95rem!important;
   padding: 10px;
+  font-weight: bolder;
+}
+nav .menu-item a:hover
+{
+  text-decoration: none;
 }
 
 nav .show>a
@@ -28,23 +34,46 @@ nav .show>a
   align-items: center;
   justify-content: center;
   height: 100%;
-  background-color: #fed31a;
+  /* background-color: #fed31a; */
+  background-image: url(https://v3.manehome.fr/wp-content/uploads/fond-triangle.png);
+  background-size: 100% 100%;
 
 }
-.dropdown-menu::before
-{
-  content:'';
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      margin-left: calc(100%/2)px;
-      width: 0;
-      height: 0;
-      border-bottom: solid calc(100%/2) #fed31a;
-      border-left: solid calc(100%/2) transparent;
-      border-right: solid calc(100%/2) transparent;
+.dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    min-width: calc(100% * 2 + 5px);
+    left: calc(-50% - 2.5px) ;
+    background: none;
+    background-image: url(https://v3.manehome.fr/wp-content/uploads/BG.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
-.dropdown-menu.show
+.dropdown-menu .menu-item:hover
+{
+  background-color: #e6e4e4;
+}
+.dropdown-menu .menu-item a
+{
+  font-size: 0.9rem;
+  color: #666666!important;
+}
+.dropdown-toggle::after
+{
+  display: none !important;
+}
+.for_you
+{
+  background-image: url(https://v3.manehome.fr/wp-content/uploads/forYou.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.for_you>a
+{
+  opacity: 0;
+}
+/* .dropdown-menu.show
 {
   margin-top: 30px;
-}
+} */
