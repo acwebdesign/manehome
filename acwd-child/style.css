@@ -97,6 +97,13 @@ h2{
 	width: 3em;
 }
 
+@media (max-width: 1300px) {
+	.dots-left,
+	.dots-right{
+		display: none;
+	}
+}
+
 .dots-left{
 	left : -3em;
 	top: 15%;
@@ -236,15 +243,25 @@ h2{
 	color: grey;
 }
 
-.nous h2{
+.paragraphe-type-1 h2{
 	text-transform: uppercase;
 	font-size: 2em;
 	margin-bottom: .5em;
-}*
+}
 
-.nous p{
+.paragraphe-type-1 p{
 	color: grey;
 	margin-bottom: 3em;
+}
+
+.paragraphe-type-1 a{
+	color: black;
+	text-decoration: underline;
+}
+
+.paragraphe-type-1 a:hover{
+	color: grey;
+	text-decoration: underline;
 }
 
 /* Chiffre clés */
@@ -337,6 +354,23 @@ h2{
 
 .bloc-competence:hover .texte-competence{
 	opacity: 1;
+}
+
+/* Réinventer */
+.img-reinventer{
+	border-right: 2px solid grey;
+}
+
+/* FAQ */
+#reponse{
+	overflow: hidden;
+	transition: max-height .5s;
+}
+.bord-gris{
+	border: 2px solid lightgrey;
+}
+.bord-orange{
+	border: 2px solid orange;
 }
 
 /* footer */

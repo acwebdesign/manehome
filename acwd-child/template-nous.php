@@ -108,7 +108,7 @@ get_template_part( 'template-parts/content', 'header');
             <span class="texte-intro"><?php the_field('texte_intro') ?></span>
             <img class="mb-5" src="<?php echo get_field('image_text')['url']; ?>" alt="" width="100%">
           </div>
-          <div class="col-6 px-5 nous">
+          <div class="col-6 px-5 paragraphe-type-1">
             <?php the_field('texte'); ?>
           </div>
         </div>
