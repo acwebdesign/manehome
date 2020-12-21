@@ -29,7 +29,7 @@
             </div>
           </div>
           <div class="col-3 pt-3">
-            <span class="footer-title">Useful links</span>
+            <span class="footer-title">Plan du site</span>
             <?php
             wp_nav_menu(array(
                 'menu' => 'quatertiary',
