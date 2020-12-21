@@ -146,7 +146,7 @@ get_header();
 								</div>
 							</div>
 							<div class="col-6 px-5 d-flex flex-column justify-content-center">
-								<span class="small-title pb-3"><?php echo get_field('titre_maitrise') ?></span>
+								<h1 class="small-title pb-3"><?php echo get_field('titre_maitrise') ?></h1>
 								<h2 class="pb-2"><?php echo get_field('sous_titre_maitrise') ?></h2>
 								<p><?php echo get_field('texte_maitrise') ?></p>
 								<div class="py-5">

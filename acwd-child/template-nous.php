@@ -20,17 +20,95 @@ Template Name: Template Qui sommes nous
 get_header();
 get_template_part( 'template-parts/content', 'header');
 ?>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col"></div>
+    <section class="py-5">
+      <div class="container position-relative">
+        <div class="dots-left row">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="dots-right row">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
         </div>
         <div class="row">
-          <div class="col-6">
-            <?php the_field('texte_intro') ?>
-            <img src="<?php echo get_field('image_text')['url']; ?>" alt="" width="100%">
+          <div class="col">
+            <h1><?php echo get_field('titre_page'); ?></h1>
           </div>
-          <div class="col-6">
+        </div>
+        <div class="row my-5">
+          <div class="col-6 px-5 d-flex flex-column justify-content-between">
+            <span class="texte-intro"><?php the_field('texte_intro') ?></span>
+            <img class="mb-5" src="<?php echo get_field('image_text')['url']; ?>" alt="" width="100%">
+          </div>
+          <div class="col-6 px-5 nous">
             <?php the_field('texte'); ?>
           </div>
         </div>

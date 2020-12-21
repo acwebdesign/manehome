@@ -15,7 +15,7 @@
 get_header();
 get_template_part( 'template-parts/content', 'header');
 ?>
-					<section class="container">
+					<section class="container py-5">
 						<h1><?php echo get_field('titre_maitriser') ?></h1>
             <div class="position-relative">
               <?php $image = get_field('image') ?>

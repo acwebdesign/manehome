@@ -11,6 +11,7 @@
 
 
 <header class="header-global" style="background-image: url(<?php echo get_field('image_background')['url']; ?>);">
+  <div class="triangle"></div>
   <div class="container">
     <div class="row">
       <div class="col-auto mx-auto">

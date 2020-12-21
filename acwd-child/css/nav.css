@@ -1,0 +1,50 @@
+nav
+{
+  background-color: rgba(255,255,255,0.66);
+}
+nav .navbar-nav
+{
+  height: 80px;
+  align-items: center;
+}
+nav .navbar-nav .menu-item
+{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .menu-item a
+{
+  color: #222222;
+  font-size: 1rem!important;
+  padding: 10px;
+}
+
+nav .show>a
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #fed31a;
+
+}
+.dropdown-menu::before
+{
+  content:'';
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: calc(100%/2)px;
+      width: 0;
+      height: 0;
+      border-bottom: solid calc(100%/2) #fed31a;
+      border-left: solid calc(100%/2) transparent;
+      border-right: solid calc(100%/2) transparent;
+}
+.dropdown-menu.show
+{
+  margin-top: 30px;
+}
