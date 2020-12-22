@@ -29,7 +29,7 @@ get_template_part( 'template-parts/content', 'header');
 											<i class="fas fa-plus"></i>
 										</a>
 									</div>
-									<div id="reponse-<?php echo get_row_index();?>" class="collapse px-3 mt-4 mb-3">
+									<div id="reponse-<?php echo get_row_index();?>" class="reponse collapse px-3 mt-4 mb-3">
 										<?php echo get_sub_field('reponse') ?>
 									</div>
 								</div>
@@ -41,7 +41,7 @@ get_template_part( 'template-parts/content', 'header');
 						jQuery(document).ready(function(){
 							jQuery('.question').find('a').click(function(e){
 								var parent = jQuery(this).parent().parent();
-								jQuery(this).parent().toggleClass('bg-warning');
+								jQuery(this).parent().toggleClass('bg-faq');
 								jQuery(this).parent().children().toggleClass('text-white');
 								jQuery(this).parent().children().toggleClass('text-dark');
 								jQuery(this).parent().toggleClass('bord-gris');

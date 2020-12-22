@@ -109,7 +109,7 @@ get_template_part( 'template-parts/content', 'header');
 							// 3. On lance la boucle !
 							if( $my_query->have_posts() ) : while( $my_query->have_posts() ) : $my_query->the_post(); ?>
 							<div class="col-6 py-3">
-								<div class="bloc-competence row bg-warning py-4 h-100 w-100">
+								<div class="bloc-competence row bg-orange py-4 h-100 w-100">
 									<?php $img_compétences = get_the_post_thumbnail_url(); ?>
 									<div class="col-5 d-flex align-items-center">
 										<img class="img-competences" src="<?php echo $img_compétences; ?>" alt="<?php echo $img_compétences;?>" width="100%">
@@ -135,7 +135,7 @@ get_template_part( 'template-parts/content', 'header');
 							<div class="col-6">
 								<div class="row justify-content-center align-items-center h-100 w-100">
 									<?php $img_last = get_field('dernier_bloc'); ?>
-									<img src="<?php echo $img_last['url'] ?>" alt="<?php echo $img_last['alt'] ?>">
+									<img src="<?php echo $img_last['url'] ?>" alt="<?php echo $img_last['alt'] ?>" width="70%">
 								</div>
 							</div>
 						</div>

@@ -32,7 +32,7 @@ get_header();
 													<span class="slider-white"><?php echo get_sub_field('titre_blanc')?></span>
 												</div>
 												<div class="">
-													<a class="btn py-3 px-5 rounded bg-warning" href="<?php echo get_sub_field('lien_bouton') ?>"><?php echo get_sub_field('texte_bouton') ?></a>
+													<a class="btn py-3 px-5 rounded bg-orange" href="<?php echo get_sub_field('lien_bouton') ?>"><?php echo get_sub_field('texte_bouton') ?></a>
 												</div>
 											</div>
 											<?php $slider_img = get_sub_field('image_de_fond')?>
@@ -150,7 +150,7 @@ get_header();
 								<h2 class="pb-2"><?php echo get_field('sous_titre_maitrise') ?></h2>
 								<p><?php echo get_field('texte_maitrise') ?></p>
 								<div class="py-5">
-									<a class="btn py-3 px-5 rounded bg-warning" href="<?php echo get_field('lien_du_bouton_maitrise') ?>"><?php echo get_field('texte_du_bouton_maitrise') ?></a>
+									<a class="btn py-3 px-5 rounded bg-orange" href="<?php echo get_field('lien_du_bouton_maitrise') ?>"><?php echo get_field('texte_du_bouton_maitrise') ?></a>
 								</div>
 							</div>
 						</div>
@@ -185,7 +185,7 @@ get_header();
 						</div>
 					</section>
 					<section class="container manehome-for-you py-5 my-5">
-						<div class="bg-warning position-relative row align-items-center pl-5">
+						<div class="bg-orange position-relative row align-items-center pl-5">
 							<div class="col-6 position-absolute pl-5 pb-5">
 								<div class="pl-3 row align-items-end flex-nowrap pb-3">
 									<span class="foryou-black pb-2 pr-2"><?php echo get_field('titre_noir_for_you') ?></span>

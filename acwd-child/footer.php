@@ -14,7 +14,7 @@
 </div><!-- #content -->
 
 
-<footer class="bg-dark small text-white">
+<footer class="small text-white">
     <div class="container pt-5 border-bottom border-secondary">
         <div class="row">
           <div class="col-3">
@@ -25,7 +25,7 @@
                 <span><?php echo get_theme_mod('company_zipcode') ?></span>
                 <span><?php echo get_theme_mod('company_city') ?></span>
               </div>
-              <a class="text-warning" href="tel:+33<?php echo substr(str_replace(' ', '', get_theme_mod('company_phone')), 1)?>"><?php echo get_theme_mod('company_phone')?></a>
+              <a class="text-orange" href="tel:+33<?php echo substr(str_replace(' ', '', get_theme_mod('company_phone')), 1)?>"><?php echo get_theme_mod('company_phone')?></a>
             </div>
           </div>
           <div class="col-3 pt-3">
@@ -68,14 +68,14 @@
         <!-- echo !empty(get_theme_mod('company_email')) ? '<a href="mailto:'.get_theme_mod('company_email').'">' . get_theme_mod('company_email') . '</a> &nbsp;' : ''; -->
     <div class="container py-3 text-white-50">
         <div class="row">
-            <div class="col-4 text-left p-0">
+            <div class="copyright col-4 text-left p-0">
                 Copyright &copy; <?php echo date('Y'); ?> - <?php bloginfo('name'); ?>
                 - <?php _e('Tous droits réservés', 'acwd'); ?>
             </div>
-            <div class="col-4 text-center p-0">
+            <div class="realisation col-4 text-center p-0">
                 <?php _e('Réalisation', 'acwd'); ?> <a class="lien-footer"  href="https://acwd.fr">ACWD</a>
             </div>
-            <div class="col-4 text-right p-0">
+            <div class="mentions col-4 text-right p-0">
                 <a href="#" class="lien-footer" >Politique de confidentialité</a>
                 -
                 <a href="#" class="lien-footer" >Mentions légales</a>
