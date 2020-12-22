@@ -15,8 +15,8 @@
 
 
 <footer class="small text-white">
-    <div class="container pt-5 border-bottom border-secondary">
-        <div class="row">
+    <div class="container border-bottom border-secondary">
+        <div class="row py-5">
           <div class="col-3">
             <img class="mb-3" src="<?php echo get_field('logo_footer', 'option')['url']; ?>" alt="<?php echo get_field('logo_footer', 'option')['alt']; ?>"/>
             <div class="d-flex flex-column">
