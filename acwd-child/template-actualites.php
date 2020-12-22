@@ -41,7 +41,7 @@ get_template_part( 'template-parts/content', 'header');
 					</div>
 					<div class="content py-3">
 						<span class="titre-actu">Actualité 1</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 				</div>
 			</div>
@@ -55,16 +55,28 @@ get_template_part( 'template-parts/content', 'header');
 					<div class="last-actu text-center pt-5">
 						<span>Article Récent</span>
 						<img class="py-3" src="https://v3.manehome.fr/wp-content/uploads/forYou.png" alt="">
-						<form class="" action="" method="post">
-							<i id="search" class="fas fa-search"></i>
-							<input type="text" name="search" value="">
+						<form id="search" class="search-actu p-3 text-left" action="" method="get">
+							<i class="fas fa-search fa-lg text-grey" style="cursor: pointer"></i>
+							<input id="search-bar" type="text" name="search" value="" class="w-100 border-0" style="display:none">
 						</form>
 					</div>
 				</div>
 		</div>
 	</div>
 </section>
-
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('#search').click(function(e){
+			jQuery('#search').find('.fa-search').hide();
+			jQuery('#search-bar').show();
+			e.stopPropagation();
+		});
+		jQuery(document).click(function(e){
+				jQuery('#search').find('.fa-search').show();
+				jQuery('#search-bar').hide();
+		})
+	})
+</script>
 
 <?php
 get_footer();

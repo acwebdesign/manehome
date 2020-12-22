@@ -432,6 +432,11 @@ h2{
 	text-transform: uppercase;
 }
 
+.search-actu{
+	border-top: 2px solid #e7e7e7;
+	border-bottom: 2px solid #e7e7e7;
+}
+
 /* Valeur & Engagement */
 .liste-qualite ul{
 	list-style-type: none;
