@@ -13,55 +13,85 @@
  */
 
 get_header();
-get_template_part( 'template-parts/content', 'header');
+get_template_part( 'template-parts/content', 'header_black');
 ?>
 
-					<section class="container">
-						<h1><?php echo get_field('titre_competences') ?></h1>
-						<p class="chapo"><?php echo get_field('chapo_competences') ?></p>
-						<div class="row">
-						<?php // 1. On définit les arguments pour définir ce que l'on souhaite récupérer
-							$args = array(
-							    'post_type' => 'equipe',
-							    'posts_per_page' => -1,
-									'order' => 'ASC',
-							);
+<style>
+	.liste-qualite ul{
+		list-style-type: none;
+	}
+	.liste-qualite .fas.fa-check{
+		color:white;
+	}
+	.charte-qualite{
+		background-color: #fed31a;
+	}
+	.qualite{
+		font-size: 48px;
+	}
+</style>
 
-							// 2. On exécute la WP Query
-							$my_query = new WP_Query( $args );
-
-							// 3. On lance la boucle !
-							if( $my_query->have_posts() ) : while( $my_query->have_posts() ) : $my_query->the_post(); ?>
-							<div class="col-6">
-								<div class="row bg-warning m-3">
-									<?php $img_compétences = get_the_post_thumbnail_url(); ?>
-									<div class="col-5">
-										<img src="<?php echo $img_compétences; ?>" alt="<?php echo $img_compétences;?>" width="100%">
-									</div>
-									<div class="col-7">
-										<span class="nom font-weight-bold"><?php echo get_the_title(); ?></span><br>
-										<span class="competence"><?php echo get_field('role'); ?></span><br>
-										<p><?php echo get_the_content(); ?></p>
-									</div>
-								</div>
-							</div>
+	<section>
+		<div class="container">
+			<div class="row my-5 text-center ">
+				<div class="col">
+					<h1 class="mb-3"><?php echo get_field('titre_introduction') ?></h1>
+					<p class="chapo">
+						<?php echo get_field('texte_introduction', false,false) ?>
+					</p>
+				</div>
+			</div>
+			<div class="row my-5">
+				<div class="col-12 col-md-6">
+					<?php
+					$image = get_field('image_valeurs_et_engagements');
+					if( !empty( $image ) ): ?>
+							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"width="100%" />
+					<?php endif; ?>
+				</div>
+				<div class="col-12 col-md-6">
+					<h2 class="text-uppercase mb-3"><?php echo get_field('titre_valeurs_et_engagements') ?></h2>
+					<p>
+						<?php echo get_field('texte_valeurs_et_engagements', false,false) ?>
+					</p>
+				</div>
+			</div>
+			<div class="row my-5">
+				<div class="col-12 col-md-6">
+					<h2 class="text-uppercase mb-3"><?php echo get_field('titre_partenaires') ?></h2>
+					<p>
+						<?php echo get_field('texte_partenaires', false,false) ?>
+					</p>
+				</div>
+				<div class="col-12 col-md-6">
+					<?php
+					$image = get_field('image_partenaires');
+					if( !empty( $image ) ): ?>
+					    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"width="100%" />
+					<?php endif; ?>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="charte-qualite py-2">
+		<div class="container">
+			<div class="row my-5 ">
+				<div class="col-12 col-md-3">
+					<h2 class="text-uppercase"><?php echo get_field('titre_charte_qualite_part1') ?> <span class="qualite text-white"><?php echo get_field('titre_charte_qualite_part2') ?></span></h2>
+				</div>
+				<div class="col-12 col-md-9 liste-qualite">
+					<ul>
 						<?php
-						endwhile;
-						endif;
+						if( have_rows('liste_charte_qualite') ): while( have_rows('liste_charte_qualite') ): the_row(); ?>
+			        <li>
+								<p><i class="fas fa-check pr-2 fa-lg"></i><?php the_sub_field('qualite',false,false); ?></p>
+			        </li>
+					  <?php endwhile; endif; ?>
+					</ul>
 
-						// 4. On réinitialise à la requête principale (important)
-						wp_reset_postdata();
-						 ?>
-							<div class="col-6">
-								<div class="row m-3 justify-content-center align-items-center">
-									<?php $img_last = get_field('dernier_bloc'); ?>
-									<img src="<?php echo $img_last['url'] ?>" alt="<?php echo $img_last['alt'] ?>">
-								</div>
-							</div>
-						</div>
-					</section>
-					<?php get_template_part( 'template-parts/chiffres-cles'); ?>
-
-
+				</div>
+			</div>
+		</div>
+	</section>
 <?php
 get_footer();
