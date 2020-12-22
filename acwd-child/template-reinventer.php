@@ -102,16 +102,16 @@ get_template_part( 'template-parts/content', 'header');
 										<?php $img = get_sub_field('image') ?>
 										<img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>" width="100%">
 									</div>
-									<div class="col-9 pl-5 pr-0">
+									<div class="col-9 pl-5 pr-0 text-grey">
 										<?php echo get_sub_field('texte') ?>
 									</div>
 								</div>
-								<div class="col-9 px-0 mr-0 mt-5 ml-auto bg-light row">
+								<div class="citation col-9 px-0 mr-0 mt-5 ml-auto row">
 									<div class="col-1 pl-0">
 										<?php $picto = get_sub_field('picto') ?>
 										<img src="<?php echo $picto['url'] ?>" alt="<?php echo $picto['alt'] ?>" width="100%">
 									</div>
-									<div class="col-11 py-3">
+									<div class="col-11 py-3 text-grey">
 										<?php echo get_sub_field('citation') ?>
 									</div>
 								</div>

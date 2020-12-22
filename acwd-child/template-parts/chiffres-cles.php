@@ -24,13 +24,13 @@
                   ?>
                   <div class="col-3 d-flex flex-column justify-content-center align-items-center">
                       <img src="<?php echo get_sub_field('icon')['url']; ?>" alt="" class="w-25">
-                      <p class="row align-items-center"><span class="font-weight-bold text-white mb-0 mr-2 h4"><?php echo get_sub_field('chiffre'); ?></span> <?php echo get_sub_field('label'); ?></p>
+                      <p class="row align-items-center text-grey"><span class="font-weight-bold text-white mb-0 mr-2 h4"><?php echo get_sub_field('chiffre'); ?></span> <?php echo get_sub_field('label'); ?></p>
                   </div>
               <?php endwhile; ?>
           <?php endif; ?>
         </div>
       </div>
-      <div class="bg-warning bg-clip-cles">
+      <div class="bg-orange bg-clip-cles">
         <div class="position-relative" style="height: 100%;">
           <div class="clip-path-cles"></div>
         </div>
@@ -43,8 +43,8 @@
               <?php while( have_rows('chiffres_batiments', 'option') ): the_row();
                   ?>
                   <div class="col d-flex flex-column align-items-center">
-                      <p class="font-weight-bold text-warning h2 text-center"><?php echo get_sub_field('chiffre'); ?></p>
-                      <p class="text-center"> <?php echo get_sub_field('label'); ?></p>
+                      <p class="font-weight-bold text-orange h2 text-center"><?php echo get_sub_field('chiffre'); ?></p>
+                      <p class="text-center text-grey"> <?php echo get_sub_field('label'); ?></p>
                   </div>
               <?php endwhile; ?>
           <?php endif; ?>
