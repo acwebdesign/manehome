@@ -158,7 +158,7 @@ get_header();
 					<section class="position-relative realisations py-3 my-5">
 						<div class="container my-5">
 							<div class="row">
-							<div class="col-7 py-5 d-flex flex-column">
+							<div class="col-6 py-5 d-flex flex-column">
 								<span class="small-title pb-3"><?php echo get_field('titre_projets') ?></span>
 								<h2 class="pb-5"><?php echo get_field('sous_titre_projets') ?></h3>
 								<ul>
@@ -168,10 +168,10 @@ get_header();
 									<?php endwhile; endif; ?>
 								</ul>
 							</div>
-							<div class="col-5">
+							<div class="col-6">
 								<div class="position-relative" style="height: 100%">
-									<img class="realisations-img" style="bottom: 0; left: 0;" src="" alt="" >
-									<img class="realisations-img" style="top: 0; right: 0;"src="" alt="">
+									<img class="realisations-img" style="bottom: 10%; left: 0;" src="https://v3.manehome.fr/wp-content/uploads/Reception-chantier-BatiScript.jpg" alt="" >
+									<img class="realisations-img" style="top: 10%; right: 0;"src="https://v3.manehome.fr/wp-content/uploads/pgc-chantier.jpg" alt="">
 								</div>
 							</div>
 						</div>

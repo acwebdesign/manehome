@@ -30,10 +30,10 @@
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+		text-transform: uppercase;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 }
 
 .bg-orange{
@@ -49,7 +49,12 @@
 }
 
 
+body{
+	font-family: navigo, sans-serif;
+	font-weight: 400;
+	font-style: normal;
 
+}
 /* Home */
 h1{
 	color : #aeada8;
@@ -96,7 +101,6 @@ h2{
 
 .btn{
 	color: white;
-	font-weight: bold;
 	font-size: 1em;
 }
 
@@ -193,10 +197,11 @@ h2{
 
 .realisations-img{
 	position: absolute;
+	object-fit: cover;
 	background-color: grey;
 	box-shadow: 0px 0px 10px rgb(0, 0, 0, .6);
-	height: 350px;
-	width: 250px;
+	height: 240px;
+	width: 360px;
 }
 
 .bg-clip,
@@ -402,11 +407,19 @@ h2{
 }
 
 /* Actualités */
+.jour,
+.mois,
+.annee{
+	color: black;
+}
 .jour{
 	border-bottom: 2px solid black;
 }
 .annee{
 	font-size: .8em;
+}
+.categorie{
+	text-transform: uppercase;
 }
 .titre-actu{
 	text-transform: uppercase;
@@ -418,14 +431,22 @@ h2{
 	transition: opacity .3s;
 }
 
+.bloc-actu a:hover{
+	text-decoration: none;
+}
+
 .bloc-actu:hover .actu-cache{
 	opacity: .8;
 }
 
-.categorie li{
+.categories li{
 	list-style: none;
 	padding: .5em 0;
 	border-bottom: 2px solid #e7e7e7;
+}
+
+.categories li a{
+	color: black;
 }
 
 .last-actu span{
@@ -436,6 +457,16 @@ h2{
 	border-top: 2px solid #e7e7e7;
 	border-bottom: 2px solid #e7e7e7;
 }
+
+.last-actu-cache{
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.last-actu-cache:hover{
+	opacity: .8;
+}
+
 
 /* Valeur & Engagement */
 .liste-qualite ul{
@@ -451,10 +482,17 @@ h2{
 	font-size: 48px;
 }
 
+/* Single Actualités */
+.titre-article{
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.texte-article p{
+	color: #666666;
+}
 /* footer */
 
 footer{
-	font-weight: bold !important;
 	background-color: #333333;
 }
 
