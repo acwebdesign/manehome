@@ -66,3 +66,37 @@ function acwd_add_to_cart_fragment( $fragments ) {
  	return $fragments;
 
  }
+
+ /*
+* Plugin Name: Course Taxonomy
+* Description: A short example showing how to add a taxonomy called Course.
+* Version: 1.0
+* Author: developer.wordpress.org
+* Author URI: https://codex.wordpress.org/User:Aternus
+*/
+
+function wporg_register_taxonomy_type() {
+     $labels = array(
+         'name'              => _x( 'Type', 'taxonomy general name' ),
+         'singular_name'     => _x( 'Type', 'taxonomy singular name' ),
+         'search_items'      => __( 'Search Type' ),
+         'all_items'         => __( 'All Type' ),
+         'parent_item'       => __( 'Parent Type' ),
+         'parent_item_colon' => __( 'Parent Type:' ),
+         'edit_item'         => __( 'Edit Type' ),
+         'update_item'       => __( 'Update Type' ),
+         'add_new_item'      => __( 'Add New Type' ),
+         'new_item_name'     => __( 'New Type Name' ),
+         'menu_name'         => __( 'Type' ),
+     );
+     $args   = array(
+         'hierarchical'      => true, // make it hierarchical (like categories)
+         'labels'            => $labels,
+         'show_ui'           => true,
+         'show_admin_column' => true,
+         'query_var'         => true,
+         'rewrite'           => [ 'slug' => 'type' ],
+     );
+     register_taxonomy( 'type', [ 'realisations' ], $args );
+}
+add_action( 'init', 'wporg_register_taxonomy_type' );
