@@ -16,21 +16,6 @@ get_header();
 get_template_part( 'template-parts/content', 'header_black');
 ?>
 
-<style>
-	.liste-qualite ul{
-		list-style-type: none;
-	}
-	.liste-qualite .fas.fa-check{
-		color:white;
-	}
-	.charte-qualite{
-		background-color: #fed31a;
-	}
-	.qualite{
-		font-size: 48px;
-	}
-</style>
-
 	<section>
 		<div class="container">
 			<div class="row my-5 text-center ">
