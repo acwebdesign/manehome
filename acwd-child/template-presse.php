@@ -23,21 +23,6 @@ get_template_part( 'template-parts/content', 'header');
 	}
 </style>
 					<section class="container">
-						<!-- <h1><?php echo get_field('titre_competences') ?></h1>
-						<div class="row">
-							<?php if (have_rows('blocs_faq')):
-								while (have_rows('blocs_faq')): the_row(); ?>
-								<div class="col-6">
-									<div class="row align-items-center justify-content-between mx-0 px-3 py-2 bg-warning rounded ">
-										<span class="col-11 pl-0 text-white"><?php echo get_sub_field('question') ?></span>
-										<a href="" class="col-1 pr-0 text-white text-center"><i class="fas fa-minus"></i></a>
-									</div>
-									<div class="px-3 py-5">
-										<?php echo get_sub_field('reponse') ?>
-									</div>
-								</div>
-							<?php endwhile; endif; ?>
-						</div> -->
 						<div class="row my-5 text-center ">
 							<div class="col">
 								<h1 class="mb-3"><?php echo get_field('titre_introduction') ?></h1>
