@@ -401,6 +401,51 @@ h2{
 	color : #373737;
 }
 
+/* Actualités */
+.jour{
+	border-bottom: 2px solid black;
+}
+.annee{
+	font-size: .8em;
+}
+.titre-actu{
+	text-transform: uppercase;
+}
+.actu-cache{
+	top:0;
+	left: 0;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.bloc-actu:hover .actu-cache{
+	opacity: .8;
+}
+
+.categorie li{
+	list-style: none;
+	padding: .5em 0;
+	border-bottom: 2px solid #e7e7e7;
+}
+
+.last-actu span{
+	text-transform: uppercase;
+}
+
+/* Valeur & Engagement */
+.liste-qualite ul{
+	list-style-type: none;
+}
+.liste-qualite .fas.fa-check{
+	color:white;
+}
+.charte-qualite{
+	background-color: #fed31a;
+}
+.qualite{
+	font-size: 48px;
+}
+
 /* footer */
 
 footer{

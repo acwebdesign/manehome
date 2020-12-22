@@ -1,19 +1,23 @@
 nav
 {
-  background-color: rgba(255,255,255,0.66);
+  background-color: rgba(255,255,255,0.85);
 }
 nav .navbar-nav
 {
-  height: 100px;
-  align-items: center;
+  min-height: 100px;
+}
+@media (min-width: 991px) {
+  nav .navbar-nav
+  {
+    height: 100px!important;
+  }
 }
 nav .navbar-nav .menu-item
 {
   height: 100%;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-  padding: 5px;
+  padding: 0px 5px;
 }
 
 nav .menu-item a
@@ -34,7 +38,6 @@ nav .show>a
   align-items: center;
   justify-content: center;
   height: 100%;
-  /* background-color: #fed31a; */
   background-image: url(https://v3.manehome.fr/wp-content/uploads/fond-triangle.png);
   background-size: 100% 100%;
 
@@ -73,7 +76,3 @@ nav .show>a
 {
   opacity: 0;
 }
-/* .dropdown-menu.show
-{
-  margin-top: 30px;
-} */
