@@ -20,8 +20,8 @@
 </head>
 
 <body <?php body_class(); ?> id="page-top">
-<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink p-0 " id="mainNav">
-    <div class="container row align-items-center justify-content-center justify-content-lg-around mx-auto">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink p-md-0 " id="mainNav">
+    <div class="container row align-items-center justify-content-lg-around mx-auto">
         <?php the_custom_logo(); ?>
         <button class="navbar-toggler navbar-toggler-right position-absolute" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"

@@ -20,12 +20,12 @@ get_template_part( 'template-parts/content', 'header');
 				<div class="row">
 
 					<div class="col-12">
-						<p>
-							<h5><?php bloginfo( 'name' ); ?></h5><br />
-							<?php echo get_theme_mod( 'company_address' ); ?><br />
-							<?php echo get_theme_mod( 'company_zipcode' ); ?> <?php echo get_theme_mod( 'company_city' ); ?><br />
-							<a href="mailto:<?php echo get_theme_mod('company_email'); ?>"><?php echo get_theme_mod('company_email'); ?></a><br />
-							<a href="tel:<?php echo '+33'.substr(str_replace(' ','',get_theme_mod('company_phone')),1); ?>"><?php echo get_theme_mod('company_phone'); ?></a>
+						<p class="contact-coordonnee">
+							<h5 cl><?php bloginfo( 'name' ); ?></h5><br />
+							<div class="my-3"><i class="fas fa-map-marker-alt text-warning fa-lg mr-3"></i> <?php echo get_theme_mod( 'company_address' ); ?>
+							<?php echo get_theme_mod( 'company_zipcode' ); ?> <?php echo get_theme_mod( 'company_city' ); ?></div>
+							<div class="my-3"><a class="text-dark my-5 py-5" href="mailto:<?php echo get_theme_mod('company_email'); ?>"><i class="fas fa-envelope text-warning fa-lg mr-3"></i> <?php echo get_theme_mod('company_email'); ?></a></div>
+							<div class="my-3"><a class="text-dark my-5 py-5" href="tel:<?php echo '+33'.substr(str_replace(' ','',get_theme_mod('company_phone')),1); ?>"><i class=" text-warning fa-lg mr-3 fas fa-phone-alt"></i> <?php echo get_theme_mod('company_phone'); ?></a></div>
 						</p>
 					</div>
 					<div class="col-12 col-md-6 ">

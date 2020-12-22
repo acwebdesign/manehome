@@ -25,36 +25,53 @@ get_template_part( 'template-parts/content', 'header');
 			</div>
 		</div>
 		<div class="row my-5">
-			<div class="col-10 d-flex flex-wrap">
-				<div class="col-6 bloc-actu">
-					<div class="position-relative">
-						<div class="position-absolute bg-orange w-100 h-100 actu-cache" ></div>
-						<img src="https://v3.manehome.fr/wp-content/uploads/2020/12/logoManehome.png" alt="" width="100%">
-						<div class="d-flex position-absolute align-items-start" style="top:0; left:0;">
-							<div class="bg-orange d-flex flex-column px-2 pt-2 pb-1 text-center">
-								<span class="jour mx-2">03</span>
-								<span class="mois">01</span>
-								<span class="annee">2020</span>
-							</div>
-								<span class="bg-white bord-gris p-2">CATEGORIE</span>
-						</div>
-					</div>
-					<div class="content py-3">
-						<span class="titre-actu">Actualité 1</span>
-						<p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</div>
-				</div>
+			<div class="col-md-10 col-12 order-md-1 order-2 d-flex flex-wrap">
+				<?php
+				$actus = array(
+						'post_type' => 'post',
+						'post_per_page' => '8',
+						'orderby' => 'date',
+						'order' => 'DESC'
+				);
+				$wp_actus= new WP_Query( $actus );
+				if( $wp_actus->have_posts() ) :
+             while( $wp_actus->have_posts()) :
+               $wp_actus->the_post();?>
+							 	<div class="col-md-6 col-12 bloc-actu">
+									<a href="<?php echo get_permalink(); ?>">
+										<div class="position-relative">
+											<div class="position-absolute bg-orange w-100 h-100 actu-cache" ></div>
+											<img src="<?php echo get_the_post_thumbnail_url();?>" alt="" width="100%">
+											<div class="d-flex position-absolute align-items-start" style="top:0; left:0;">
+												<div class="bg-orange d-flex flex-column px-2 pt-2 pb-1 text-center">
+													<span class="jour mx-2"><?php echo get_the_date('d') ?></span>
+													<span class="mois"><?php echo get_the_date('m') ?></span>
+													<span class="annee"><?php echo get_the_date('Y') ?></span>
+												</div>
+													<span class="categorie text-grey bg-white bord-gris p-2"><?php echo get_the_category()[0]->name ?></span>
+											</div>
+										</div>
+										<div class="content py-3">
+											<span class="text-grey titre-actu"><?php echo get_the_title(); ?></span>
+											<p class="text-grey mt-2"><?php echo get_the_excerpt() ?></p>
+										</div>
+									</a>
+								</div>
+			<?php endwhile; endif; wp_reset_postdata();?>
 			</div>
-				<div class="col-2 d-flex flex-column">
-					<ul class="categorie m-0 pl-0 text-center">
+				<div class="col-md-2 col-12 pb-5 order-md-2 order-1 d-flex flex-column">
+					<ul class="categories m-0 pl-0 text-center">
 						<li>Catégories</li>
-						<li>Chantier (2)</li>
-						<li>Manehome (1)</li>
-						<li>Technique et réglementation</li>
+						<li><a href="#">Chantier (2)</a></li>
+						<li><a href="#">Manehome (1)</a></li>
+						<li><a href="#">Technique et réglementation</a></li>
 					</ul>
-					<div class="last-actu text-center pt-5">
+					<div class="d-flex flex-column last-actu text-center pt-5">
 						<span>Article Récent</span>
-						<img class="py-3" src="https://v3.manehome.fr/wp-content/uploads/forYou.png" alt="">
+						<a class="my-3 mx-auto position-relative" href="#">
+							<div class="position-absolute bg-orange w-100 h-100 last-actu-cache" style="top:0; left:0"></div>
+							<img src="https://v3.manehome.fr/wp-content/uploads/chantier.jpg" alt="" width="100%">
+						</a>
 						<form id="search" class="search-actu p-3 text-left" action="" method="get">
 							<i class="fas fa-search fa-lg text-grey" style="cursor: pointer"></i>
 							<input id="search-bar" type="text" name="search" value="" class="w-100 border-0" style="display:none">
