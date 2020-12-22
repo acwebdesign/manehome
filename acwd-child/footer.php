@@ -17,7 +17,7 @@
 <footer class="small text-white">
     <div class="container border-bottom border-secondary">
         <div class="row py-5">
-          <div class="col-3">
+          <div class="col-md-3 col-sm-6 col-12">
             <img class="mb-3" src="<?php echo get_field('logo_footer', 'option')['url']; ?>" alt="<?php echo get_field('logo_footer', 'option')['alt']; ?>"/>
             <div class="d-flex flex-column">
               <span><?php echo get_theme_mod('company_address') ?></span>
@@ -28,7 +28,7 @@
               <a class="text-orange" href="tel:+33<?php echo substr(str_replace(' ', '', get_theme_mod('company_phone')), 1)?>"><?php echo get_theme_mod('company_phone')?></a>
             </div>
           </div>
-          <div class="col-3 pt-3">
+          <div class="col-md-3 col-sm-6 col-12 pt-3">
             <span class="footer-title">Plan du site</span>
             <?php
             wp_nav_menu(array(
@@ -38,7 +38,7 @@
             ));
             ?>
           </div>
-          <div class="col-3 pt-3">
+          <div class="col-md-3 col-sm-6 col-12 pt-3">
             <span class="footer-title">Suivez-nous!</span>
             <div class="social d-flex pb-2 mt-3">
                 <a href="<?php echo get_theme_mod( 'facebook' ); ?>" class="mr-3">
@@ -49,13 +49,13 @@
                 </a>
             </div>
           </div>
-          <div class="col-3 pt-3">
+          <div class="col-md-3 col-sm-6 col-12 pt-3">
             <span class="footer-title">Newsletter</span>
             <div class="mt-3">
               <p>Recevez toutes nos actualités</p>
-              <form method="post">
-                <div class="row px-3">
-                  <input class="border-0 rounded-left px-3 py-2" type="text" name="mail" value="" placeholder="Entrez votre Email">
+              <form method="post" action="">
+                <div class="d-flex flex-nowrap">
+                  <input class="border-0 rounded-left px-3 py-2" style="width: calc(100% - 44.8px);" type="text" name="mail" value="" placeholder="Entrez votre Email">
                   <button class="bg-warning border-0 rounded-right px-3 py-2" type="submit"><i class="far fa-paper-plane text-white"></i></button>
                 </div>
               </form>
