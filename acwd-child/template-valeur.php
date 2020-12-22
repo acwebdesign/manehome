@@ -61,7 +61,7 @@ get_template_part( 'template-parts/content', 'header_black');
 	<section class="charte-qualite py-2">
 		<div class="container">
 			<div class="row my-5 ">
-				<div class="col-12 col-md-3">
+				<div class="col-12 col-md-3 pb-3">
 					<h2 class="text-uppercase"><?php echo get_field('titre_charte_qualite_part1') ?> <span class="qualite text-white"><?php echo get_field('titre_charte_qualite_part2') ?></span></h2>
 				</div>
 				<div class="col-12 col-md-9 liste-qualite">
