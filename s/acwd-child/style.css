@@ -1,0 +1,600 @@
+/*
+ Theme Name:   MANEHOME
+ Theme URI:    https://acwd.fr
+ Description:  Thème Tech Smarter ACWD
+ Author:       ACWD
+ Author URI:   https://acwd.fr
+ Template:     acwd
+ Version:      1.0.0
+*/
+
+.custom-logo-link img {
+	max-height: 150px;
+	width: auto;
+}
+#nav-bar-toggle
+{
+	top: 15px;
+	right: 15px;
+	z-index: 60;
+}
+.social-mobile
+{
+	left:0;
+	top: 15px;
+}
+
+.header-global
+{
+	  height:620px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+}
+
+.bg-orange{
+	background-color: #ffcc33;
+}
+
+.text-orange{
+	color: #ffcc33;
+}
+
+.text-grey{
+	color: #666666;
+}
+
+
+body{
+	font-family: navigo, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
+}
+/* Home */
+h1{
+	color : #aeada8;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+h2{
+	font-size: 2em;
+	font-weight: bold;
+}
+.small-title{
+	text-transform: uppercase;
+	color: #989898;
+	font-size: 1em;
+	text-align: left;
+	font-weight: bold;
+}
+
+.triangle{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 30vw 20vw 0 0;
+	border-color: #fed31a transparent transparent transparent;
+}
+
+.slider-black{
+	color: black;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.slider-white{
+	color: white;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.btn{
+	color: white;
+	font-size: 1em;
+}
+
+.btn:hover{
+	color: white;
+	text-decoration: none;
+}
+
+.dots-left,
+.dots-right{
+	position: absolute;
+	width: 4em;
+}
+
+@media (max-width: 1300px) {
+	.dots-left,
+	.dots-right{
+		display: none;
+	}
+}
+
+.dots-left{
+	left : -3em;
+	top: 15%;
+}
+
+.dots-right{
+	right : -3em;
+	top: 40%;
+}
+
+.dot{
+	width: .3em;
+	height: .3em;
+	border-radius: 50%;
+	background-color: #cfcdd7;
+	margin: .4em;
+}
+
+.flip {
+  -webkit-perspective: 800;
+          perspective: 800;
+        position: relative;
+}
+.flip:hover .card{
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+}
+.flip .card {
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    background-color: #fff;
+
+}
+.flip .card .face {
+  -webkit-backface-visibility: hidden ;
+    backface-visibility: hidden ;
+   z-index: 2;
+	 width: 100%;
+}
+.flip .card .img {
+   position: relaitve;
+   z-index: 1;
+   border: 2px solid #000;
+}
+.flip .card .back {
+  -webkit-transform: rotatey(-180deg);
+          transform: rotatey(-180deg);
+  position: absolute;
+}
+
+.flip h2{
+	color: #222222;
+}
+.inner{
+  margin:0px !important;
+}
+.inner p{
+	width: 90%;
+	color: white;
+	font-weight: bold;
+}
+
+.realisations-item{
+		font-weight: bold;
+		list-style-type: none;
+}
+.realisations-item a{
+	color: #aeada9 !important;
+}
+
+.realisations-item a:hover{
+		list-style-type: none;
+		text-decoration: none;
+}
+
+.realisations-img{
+	position: absolute;
+	object-fit: cover;
+	background-color: grey;
+	box-shadow: 0px 0px 10px rgb(0, 0, 0, .6);
+	height: 240px;
+	width: 360px;
+}
+
+.realisations-img {
+	transition: transform .2s; /* Animation */
+}
+.realisations-img:hover{
+	transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	z-index: 99999;
+}
+
+@media (max-width: 600px) {
+	.realisations-img{
+		position: inherit;
+		object-fit: cover;
+		background-color: grey;
+		box-shadow: 0px 0px 10px rgb(0, 0, 0, .6);
+		height: auto;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.realisations-img {
+		transition: none; /* Animation */
+	}
+	.realisations-img:hover{
+		transform: none; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+		z-index: none;
+	}
+}
+
+.bg-clip,
+.clip-path-left,
+.clip-path-center,
+.clip-path-right{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.clip-path-left{
+	clip-path: polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%);
+	background-color: rgb(174, 173, 169, .16);
+	width: 100%;
+	height: 100%;
+}
+
+.clip-path-center{
+	clip-path: polygon(40% 25%, 55% 25%, 40% 100%, 25% 100%);
+	background-color: rgb(237, 242, 255, .29);
+	width: 100%;
+	height: 100%;
+}
+
+.clip-path-right{
+	clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 70% 100%);
+	background-color: rgb(174, 173, 169, .16);
+	width: 100%;
+	height: 100%;
+}
+
+.foryou-black{
+	color: black;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.foryou-white{
+	color: white;
+	font-weight: bold;
+	font-size: 3em;
+}
+
+.foryou-text{
+	color: #748494;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+
+/* Qui sommes nous ? */
+.texte-intro{
+	font-style: italic;
+	color: black;
+}
+
+.paragraphe-type-1 h2{
+	font-size: 2em;
+	margin-bottom: .5em;
+}
+
+.paragraphe-type-1 h2::first-letter{
+	text-transform: uppercase;
+}
+
+.paragraphe-type-1 p{
+	color: #666666;
+	margin-bottom: 3em;
+}
+
+.paragraphe-type-1 a{
+	color: black;
+	text-decoration: underline;
+}
+
+.paragraphe-type-1 a:hover{
+	color: grey;
+	text-decoration: underline;
+}
+
+/* Chiffre clés */
+.sous-titre-cles{
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+.titre-cles{
+	color: black;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.bg-clip-cles,
+.clip-path-cles{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.clip-path-cles{
+	clip-path: polygon(65% 0%, 100% 0%, 90% 100%, 55% 100%);
+	background-color: rgb(237, 242, 255, .17);
+}
+
+/* Compétences */
+.chapo{
+	font-style: italic;
+	color: black;
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	font-size : 1.1em;
+}
+
+.img-competences{
+	filter: grayscale(100%);
+	mix-blend-mode: luminosity;
+}
+
+.prenom,
+.nom,
+.competence,
+.img-competences,
+.texte-competence,
+.bloc-competence{
+	transition: all .3s;
+}
+
+.prenom,
+.nom{
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.nom{
+	text-transform: uppercase;
+}
+
+.competence{
+	color: white;
+}
+
+.texte-competence{
+	opacity: 0;
+	font-size: .8em;
+	margin: 0;
+	color: #666666;
+}
+
+.bloc-competence:hover{
+	background-color: #e6e4e4!important;
+}
+
+.bloc-competence:hover .img-competences{
+	filter: none;
+	mix-blend-mode: normal;
+}
+
+.bloc-competence:hover .nom,
+.bloc-competence:hover .prenom,
+.bloc-competence:hover .competence{
+	opacity: 0;
+}
+
+.bloc-competence:hover .texte-competence{
+	opacity: 1;
+}
+
+/* Réinventer */
+.img-reinventer{
+	border-right: 1px solid #aeada8;
+}
+.citation{
+	background-color: rgb(192, 194, 196, .15)
+}
+
+/* FAQ */
+#reponse{
+	overflow: hidden;
+	transition: max-height .5s;
+}
+.reponse p{
+	margin-bottom: 0;
+}
+.bg-faq{
+	background-color: #fed31a;
+}
+
+.bord-gris{
+	border: 1px solid #e7e7e7;
+}
+.bord-orange{
+	border: 1px solid #fed31a;
+}
+.question .fa-plus{
+	color : #373737;
+}
+
+/* Actualités */
+.jour,
+.mois,
+.annee{
+	color: black;
+}
+.jour{
+	border-bottom: 2px solid black;
+}
+.annee{
+	font-size: .8em;
+}
+.categorie{
+	text-transform: uppercase;
+}
+.titre-actu{
+	text-transform: uppercase;
+}
+.actu-cache{
+	top:0;
+	left: 0;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.bloc-actu a:hover{
+	text-decoration: none;
+}
+
+.bloc-actu:hover .actu-cache{
+	opacity: .8;
+}
+
+.categories li{
+	list-style: none;
+	padding: .5em 0;
+	border-bottom: 2px solid #e7e7e7;
+}
+
+.categories li a{
+	color: black;
+}
+
+.last-actu span{
+	text-transform: uppercase;
+}
+
+.search-actu{
+	border-top: 2px solid #e7e7e7;
+	border-bottom: 2px solid #e7e7e7;
+}
+
+.last-actu-cache{
+	background-color: rgb(254, 211, 26, .8);
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.last-actu-cache span{
+	color: black;
+	font-size: 1.2em;
+	text-transform: capitalize;
+}
+
+.last-actu-cache:hover{
+	opacity: 1;
+}
+
+
+/* Valeur & Engagement */
+.liste-qualite ul{
+	list-style-type: none;
+}
+.liste-qualite .fas.fa-check{
+	color:white;
+}
+.charte-qualite{
+	background-color: #fed31a;
+}
+.qualite{
+	font-size: 48px;
+}
+
+.charte-qualite h3{
+	font-size: 1.25rem;
+}
+
+/* Single Actualités */
+.titre-article{
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.texte-article p{
+	color: #666666;
+}
+/* footer */
+
+footer{
+	background-color: #333333;
+}
+
+footer a:hover{
+	text-decoration: none;
+}
+
+.footer-title{
+	text-transform: uppercase;
+	font-size: 1em;
+}
+
+footer ul{
+	padding: 0;
+}
+
+footer li{
+	list-style: none;
+	margin: .4em 0;
+}
+
+footer .copyright,
+footer .realisation{
+	color: rgb(255, 255, 255, .7)
+}
+
+footer .realisation a,
+footer .mentions a{
+	color: #aeada9;
+}
+
+
+footer li a{
+	color: #999999;
+}
+
+.lien-footer:hover,
+footer li a:hover{
+	color: grey;
+}
+footer .text-orange{
+	color: #ffcc33;
+}
+footer a:hover{
+	opacity: .5;
+}
+
+
+
+
+/* Template Galerie */
+.galerie .bloc_galerie img{
+	transition: transform .2s; /* Animation */
+}
+.galerie .bloc_galerie img:hover{
+	transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+/********************/

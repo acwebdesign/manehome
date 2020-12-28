@@ -27,15 +27,15 @@ get_template_part( 'template-parts/content', 'header_black');
 				</div>
 			</div>
 			<div class="row my-5">
-				<div class="col-12 col-md-6 paragraphe-type-1">
+				<div class="col-12 col-md-6">
 					<?php
 					$image = get_field('image_valeurs_et_engagements');
 					if( !empty( $image ) ): ?>
 							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"width="100%" />
 					<?php endif; ?>
 				</div>
-				<div class="col-12 col-md-6 paragraphe-type-1">
-					<h2 class="mb-3"><?php echo get_field('titre_valeurs_et_engagements') ?></h2>
+				<div class="col-12 col-md-6">
+					<h2 class="text-uppercase mb-3"><?php echo get_field('titre_valeurs_et_engagements') ?></h2>
 					<p>
 						<?php echo get_field('texte_valeurs_et_engagements', false,false) ?>
 					</p>
@@ -43,7 +43,7 @@ get_template_part( 'template-parts/content', 'header_black');
 			</div>
 			<div class="row my-5">
 				<div class="col-12 col-md-6">
-					<h2 class="mb-3"><?php echo get_field('titre_partenaires') ?></h2>
+					<h2 class="text-uppercase mb-3"><?php echo get_field('titre_partenaires') ?></h2>
 					<p>
 						<?php echo get_field('texte_partenaires', false,false) ?>
 					</p>
@@ -63,7 +63,6 @@ get_template_part( 'template-parts/content', 'header_black');
 			<div class="row my-5 ">
 				<div class="col-12 col-md-3 pb-3">
 					<h2 class="text-uppercase"><?php echo get_field('titre_charte_qualite_part1') ?> <span class="qualite text-white"><?php echo get_field('titre_charte_qualite_part2') ?></span></h2>
-					<h3><?php echo get_field('sous-titre_charte_qualite') ?></h3>
 				</div>
 				<div class="col-12 col-md-9 liste-qualite">
 					<ul>

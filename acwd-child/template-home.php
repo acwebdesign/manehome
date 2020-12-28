@@ -120,7 +120,7 @@ get_header();
 							<div class="dot"></div>
 						</div>
 						<div class="row">
-							<div class="col-6 px-5">
+							<div class="col-12 col-md-6 px-5">
 								<div class="row">
 									<?php if (have_rows('blocs_maitrise')):
 										while (have_rows('blocs_maitrise')): the_row(); ?>
@@ -145,7 +145,7 @@ get_header();
 									<?php endwhile; endif; ?>
 								</div>
 							</div>
-							<div class="col-6 px-5 d-flex flex-column justify-content-center">
+							<div class="col-12 col-md-6 px-5 d-flex flex-column justify-content-center">
 								<h1 class="small-title pb-3"><?php echo get_field('titre_maitrise') ?></h1>
 								<h2 class="pb-2"><?php echo get_field('sous_titre_maitrise') ?></h2>
 								<p><?php echo get_field('texte_maitrise') ?></p>
@@ -158,7 +158,7 @@ get_header();
 					<section class="position-relative realisations py-3 my-5">
 						<div class="container my-5">
 							<div class="row">
-							<div class="col-6 py-5 d-flex flex-column">
+							<div class="col-12 col-md-6 py-5 d-flex flex-column">
 								<span class="small-title pb-3"><?php echo get_field('titre_projets') ?></span>
 								<h2 class="pb-5"><?php echo get_field('sous_titre_projets') ?></h3>
 								<ul>
@@ -168,7 +168,7 @@ get_header();
 									<?php endwhile; endif; ?>
 								</ul>
 							</div>
-							<div class="col-6">
+							<div class="col-12 col-md-6">
 								<div class="position-relative" style="height: 100%">
 									<a href="<?php echo get_field('realisation_lien_image_1')?>">
 										<?php
