@@ -170,8 +170,22 @@ get_header();
 							</div>
 							<div class="col-6">
 								<div class="position-relative" style="height: 100%">
-									<img class="realisations-img" style="bottom: 10%; left: 0;" src="https://v3.manehome.fr/wp-content/uploads/Reception-chantier-BatiScript.jpg" alt="" >
-									<img class="realisations-img" style="top: 10%; right: 0;"src="https://v3.manehome.fr/wp-content/uploads/pgc-chantier.jpg" alt="">
+									<a href="<?php echo get_field('realisation_lien_image_1')?>">
+										<?php
+										$image = get_field('realisation_image_1');
+										if( !empty( $image ) ): ?>
+										    <img src="<?php echo esc_url($image['url']); ?>" class="realisations-img" style="bottom: 10%; left: 0;" alt="<?php echo esc_attr($image['alt']); ?>" width="100%"/>
+										<?php endif; ?>
+										<!-- <img class="realisations-img" style="bottom: 10%; left: 0;" src="https://v3.manehome.fr/wp-content/uploads/Reception-chantier-BatiScript.jpg" alt="" > -->
+									</a>
+									<a href="<?php echo get_field('realisation_lien_image_2')?>">
+										<?php
+										$image = get_field('realisation_image_2');
+										if( !empty( $image ) ): ?>
+										    <img src="<?php echo esc_url($image['url']); ?>" class="realisations-img"  style="top: 10%; right: 0;" alt="<?php echo esc_attr($image['alt']); ?>" width="100%"/>
+										<?php endif; ?>
+										<!-- <img class="realisations-img" style="top: 10%; right: 0;"src="https://v3.manehome.fr/wp-content/uploads/pgc-chantier.jpg" alt=""> -->
+									</a>
 								</div>
 							</div>
 						</div>
