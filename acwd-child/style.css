@@ -459,12 +459,19 @@ h2{
 }
 
 .last-actu-cache{
+	background-color: rgb(254, 211, 26, .8);
 	opacity: 0;
 	transition: opacity .3s;
 }
 
+.last-actu-cache span{
+	color: black;
+	font-size: 1.2em;
+	text-transform: capitalize;
+}
+
 .last-actu-cache:hover{
-	opacity: .8;
+	opacity: 1;
 }
 
 
