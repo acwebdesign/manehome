@@ -31,11 +31,11 @@ get_template_part( 'template-parts/content', 'header');
 								</p>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row justify-content-center pb-5">
 							<?php if (have_rows('bloc_presse')):
 								while (have_rows('bloc_presse')): the_row(); ?>
-								<div class="col-6">
-									<div class="flip my-3">
+								<div class="col-4">
+									<a href="<?php echo apply_filters( 'wpml_home_url', get_option( 'home' ) ); ?>" class="flip my-3">
 										<div class="card">
 											<div class="face front">
 												<div class="inner text-center">
@@ -56,7 +56,7 @@ get_template_part( 'template-parts/content', 'header');
 												</div>
 										</div>
 									</div>
-								</div>
+								</a>
 							</div>
 							<?php endwhile; endif; ?>
 						</div>
