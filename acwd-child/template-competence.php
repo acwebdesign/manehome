@@ -108,13 +108,13 @@ get_template_part( 'template-parts/content', 'header');
 
 							// 3. On lance la boucle !
 							if( $my_query->have_posts() ) : while( $my_query->have_posts() ) : $my_query->the_post(); ?>
-							<div class="col-6 py-3">
+							<div class="col-12 col-md-6 py-3 ">
 								<div class="bloc-competence row bg-orange py-4 h-100 w-100">
 									<?php $img_compétences = get_the_post_thumbnail_url(); ?>
-									<div class="col-5 d-flex align-items-center">
+									<div class="col-12 col-md-5 d-flex align-items-center">
 										<img class="img-competences" src="<?php echo $img_compétences; ?>" alt="<?php echo $img_compétences;?>" width="100%">
 									</div>
-									<div class="col-7 d-flex align-items-center position-relative">
+									<div class="col-12 col-md-7 d-flex align-items-center position-relative">
 										<div class="position-absolute d-flex flex-column">
 											<?php $nom = explode(" ", get_the_title(), 2); ?>
 											<span class="prenom"><?php echo $nom[0] ?></span>

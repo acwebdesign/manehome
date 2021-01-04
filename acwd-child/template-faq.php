@@ -21,7 +21,7 @@ get_template_part( 'template-parts/content', 'header');
 						<div class="row">
 							<?php if (have_rows('blocs_faq')):
 								while (have_rows('blocs_faq')): the_row(); ?>
-								<div data-display="hide" class="col-6 question my-3">
+								<div data-display="hide" class="col-12 col-md-6 question my-3">
 									<div class="row align-items-center justify-content-between bord-gris mx-0 px-3 py-2 rounded">
 										<span class="col-11 pl-0 text-dark"><?php echo get_sub_field('question') ?></span>
 										<a class="col-1 pr-0 text-center text-dark" data-toggle="collapse" href="#reponse-<?php echo get_row_index(); ?>" role="button" aria-expanded="false" aria-controls="collapseExample">

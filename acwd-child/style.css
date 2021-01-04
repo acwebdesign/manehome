@@ -410,6 +410,19 @@ h2{
 	opacity: 1;
 }
 
+@media (max-width: 600px) {
+
+	.bloc-competence .prenom, .nom{
+		font-size: 1em;
+
+	}
+	.texte-competence {
+    font-size: 0.5em;
+
+	}
+}
+
+
 /* Réinventer */
 .img-reinventer{
 	border-right: 1px solid #aeada8;
@@ -526,7 +539,15 @@ h2{
 .charte-qualite h3{
 	font-size: 1.25rem;
 }
+@media (max-width : 600px){
+	.valeurs_et_engagements h2{
+		padding-top:50px;
+	}
+	.valeurs_engagements_patenaires h2{
+		padding-top: 0;
+	}
 
+}
 /* Single Actualités */
 .titre-article{
 	font-weight: bold;
@@ -593,14 +614,13 @@ footer a:hover{
 }
 
 
-
-
 /* Template Galerie */
 .galerie .bloc_galerie img{
 	transition: transform .2s; /* Animation */
 }
 .galerie .bloc_galerie img:hover{
 	transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	cursor: pointer;
 }
 
 .galerie .modal-body {
@@ -610,4 +630,86 @@ footer a:hover{
 	object-fit: cover;
 	max-height: 70vh;
 }
+/********************/
+
+/* Accueil - manehome-for-you */
+
+@media (max-width: 600px) {
+
+	.manehome-for-you .manehome-for-you-container{
+		padding-left: 0 !important;
+	}
+	.manehome-for-you img.logo-for-you{
+		width: 15% !important;
+	}
+	 .manehome-for-you > div{
+		padding-left: 0 !important;
+		text-align: center;
+	}
+	.foryou-black{
+		padding-bottom: 0 !important;
+	}
+	.foryou-white{
+		font-size: 1.5em;
+		color: #ffcc33;
+		padding-right: 0;
+	}
+	.manehome-for-you .bg-img{
+		width: 100%;
+	}
+	.manehome-for-you .foryou-text{
+		font-size: 80%;
+		color: #222222;
+		padding-right: 0 !important;
+	}
+}
+
+
+/********************/
+
+/* Page Maitriser */
+
+@media (max-width: 600px) {
+	.maitriser_projet_contenu{
+		display: block;
+		position: inherit !important;
+
+	}
+	.maitriser_projet{
+		display: block;
+		position: inherit !important;
+	}
+}
+/********************/
+
+/* Page single Réalisation */
+
+.caracteristiques div:nth-child(4),div:nth-child(8){
+	color:#ffcc33;
+}
+.caracteristiques-titre{
+	color:#999999;
+}
+.caracteristiques-container{
+	background-color:#f6f6f6;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-link {
+	color:#212529;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
+	background-color: #f6f6f6;
+	text-transform: uppercase;
+}
+
+.pre-suiv a{
+	color: #212529;
+	font-weight: bold;
+}
+
+.modal .modal-header{
+	border-bottom: 2px solid #ffcc33;
+}
+
+
 /********************/

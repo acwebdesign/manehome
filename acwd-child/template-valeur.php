@@ -16,7 +16,7 @@ get_header();
 get_template_part( 'template-parts/content', 'header_black');
 ?>
 
-	<section>
+	<section class="valeurs_et_engagements">
 		<div class="container">
 			<div class="row my-5 text-center ">
 				<div class="col">
@@ -41,7 +41,7 @@ get_template_part( 'template-parts/content', 'header_black');
 					</p>
 				</div>
 			</div>
-			<div class="row my-5">
+			<div class="row my-5 valeurs_engagements_patenaires">
 				<div class="col-12 col-md-6">
 					<h2 class="mb-3"><?php echo get_field('titre_partenaires') ?></h2>
 					<p>

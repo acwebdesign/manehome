@@ -58,11 +58,11 @@ get_template_part( 'template-parts/content', 'header');
 	</div>
 	<div class="row">
 		<?php		if( have_rows('blocs_realisations') ): while( have_rows('blocs_realisations') ): the_row(); ?>
-			<div class="col-12 col-md-4 my-3">
+			<a href="<?php echo apply_filters( 'wpml_home_url', get_option( 'home/realisation/' ) ); echo get_sub_field('liens') ?>" class="col-12 col-md-4 my-3">
 				<div class="col-12 bloc-realisation row  my-2 ">
 					<div class="bg-orange">
 						<?php
-						$image = get_sub_field('image_fond');
+						$image = get_sub_field('image');
 						if( !empty( $image ) ): ?>
 								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="100%" class="img-realisation"/>
 						<?php endif; ?>
@@ -71,7 +71,7 @@ get_template_part( 'template-parts/content', 'header');
 
 						<span class="titre-realisation"><?php echo get_sub_field('titre'); ?></span>
 				</div>
-			</div>
+			</a>
 		<?php		endwhile;	endif;?>
 	</div>
 </section>

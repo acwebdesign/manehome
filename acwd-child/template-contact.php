@@ -26,7 +26,6 @@ get_template_part( 'template-parts/content', 'header');
 							<?php echo get_theme_mod( 'company_zipcode' ); ?> <?php echo get_theme_mod( 'company_city' ); ?></div>
 							<div class="my-3"><a class="text-dark my-5 py-5" href="mailto:<?php echo get_theme_mod('company_email'); ?>"><i class="fas fa-envelope text-warning fa-lg mr-3"></i> <?php echo get_theme_mod('company_email'); ?></a></div>
 							<div class="my-3"><a class="text-dark my-5 py-5" href="tel:<?php echo '+33'.substr(str_replace(' ','',get_theme_mod('company_phone')),1); ?>"><i class=" text-warning fa-lg mr-3 fas fa-phone-alt"></i> <?php echo get_theme_mod('company_phone'); ?></a></div>
-							<div class="my-3"><a href="<?php echo get_field('lien_telechargement'); ?>" class="btn bg-orange">Download</a></div>
 						</p>
 					</div>
 					<div class="col-12 col-md-6 ">
@@ -35,8 +34,11 @@ get_template_part( 'template-parts/content', 'header');
 							echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]');
 							?>
 					</div>
-					<div class="col-12 col-md-6 ">
-					</div>
+
+				</div>
+				<div class="row text-center">
+					<div class="col-12 my-3 "><a href="<?php echo get_field('lien_telechargement'); ?>" class="btn bg-orange">Download</a></div>
+
 				</div>
 			</div>
 

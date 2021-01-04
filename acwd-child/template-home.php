@@ -198,16 +198,16 @@ get_header();
 							</div>
 						</div>
 					</section>
-					<section class="container manehome-for-you py-5 my-5">
+					<section class="container manehome-for-you py-5 my-5" id="manehome_for_you">
 						<div class="bg-orange position-relative row align-items-center pl-5">
-							<div class="col-6 position-absolute pl-5 pb-5">
+							<div class="manehome-for-you-container col-12 col-md-6 position-absolute pl-5 pb-5">
 								<div class="pl-3 row align-items-end flex-nowrap pb-3">
 									<span class="foryou-black pb-2 pr-2"><?php echo get_field('titre_noir_for_you') ?></span>
 									<span class="foryou-white pr-2"><?php echo get_field('titre_blanc_for_you') ?></span>
 									<?php $logo_foryou = get_field('logo_for_you')?>
-									<img class="logo-for-you" src="<?php echo $logo_foryou['url'] ?>" alt="<?php echo $logo_foryou['alt'] ?>" width="25%">
+									<img class="logo-for-you d-none d-md-block" src="<?php echo $logo_foryou['url'] ?>" alt="<?php echo $logo_foryou['alt'] ?>" width="25%">
 								</div>
-									<p class="foryou-text pr-5"><?php echo get_field('texte_manehome_for_you') ?></p>
+									<p class="foryou-text pr-5"><?php echo get_field('texte_manehome_for_you') ?> </p>
 							</div>
 							<?php $bg_img_foryou = get_field('image_fond_for_you')?>
 							<img class="bg-img ml-auto" src="<?php echo $bg_img_foryou['url'] ?>" alt="<?php echo $bg_img_foryou['alt'] ?>" width="65%">
