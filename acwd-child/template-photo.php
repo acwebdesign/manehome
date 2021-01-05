@@ -24,7 +24,7 @@ $i=0;
 					<?php
 					$image = get_sub_field('image');
 					if( !empty( $image ) ): ?>
-							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="100%" class="img-realisation" data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="100%" data-bs-toggle="modal" data-bs-target="#exampleModal"/>
 					<?php endif; ?>
 				</div>
 			</div>
@@ -32,6 +32,8 @@ $i=0;
 			  <div class="modal-dialog modal-dialog-centered modal-xl">
 			    <div class="modal-content">
 			      <div class="modal-header">
+							<?php the_custom_logo(); ?>
+
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			          <span aria-hidden="true">&times;</span>
 			        </button>
@@ -40,8 +42,13 @@ $i=0;
 							<?php
 							$image = get_sub_field('image');
 							if( !empty( $image ) ): ?>
-									<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="100%" class="img-realisation" data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="100%" data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+								<a href="<?php echo esc_url($image['url']); ?>" class="btn bg-orange download_rea_img" src="<?php echo esc_url($image['url']); ?>" download>
+										<i class="fas fa-download"></i>  Télécharger
+								</a>
+
 							<?php endif; ?>
+
 			      </div>
 			    </div>
 			  </div>

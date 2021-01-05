@@ -31,15 +31,23 @@ get_header();
 													<span class="slider-black"><?php echo get_sub_field('titre_noir')?></span>
 													<span class="slider-white"><?php echo get_sub_field('titre_blanc')?></span>
 												</div>
-												<div class="">
+												<div class="text-center">
 													<a class="btn py-3 px-5 rounded bg-orange" href="<?php echo get_sub_field('lien_bouton') ?>"><?php echo get_sub_field('texte_bouton') ?></a>
 												</div>
 											</div>
 											<?php $slider_img = get_sub_field('image_de_fond')?>
-											<img class="d-block w-100" src="<?php echo $slider_img['url'] ?>" alt="<?php echo $slider_img['alt'] ?>">
+											<img class="d-block h-100 w-100 img-fluid" src="<?php echo $slider_img['url'] ?>" alt="<?php echo $slider_img['alt'] ?>">
 										</div>
 								<?php endwhile; endif; ?>
 						  </div>
+							<a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+						    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+						  <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+						    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+						    <span class="sr-only">Next</span>
+						  </a>
 						</div>
 					</section>
 					<section class="container position-relative maitrise-expertise py-5 my-5">
@@ -124,7 +132,7 @@ get_header();
 								<div class="row">
 									<?php if (have_rows('blocs_maitrise')):
 										while (have_rows('blocs_maitrise')): the_row(); ?>
-										<div class="col-6">
+										<div class="col-12 col-md-6">
 											<div class="flip my-3">
 												<div class="card">
 													<div class="face front">
@@ -200,14 +208,15 @@ get_header();
 					</section>
 					<section class="container manehome-for-you py-5 my-5" id="manehome_for_you">
 						<div class="bg-orange position-relative row align-items-center pl-5">
-							<div class="manehome-for-you-container col-12 col-md-6 position-absolute pl-5 pb-5">
+							<div class="manehome-for-you-container col-12 col-md-6 pl-5 pb-5">
 								<div class="pl-3 row align-items-end flex-nowrap pb-3">
 									<span class="foryou-black pb-2 pr-2"><?php echo get_field('titre_noir_for_you') ?></span>
 									<span class="foryou-white pr-2"><?php echo get_field('titre_blanc_for_you') ?></span>
 									<?php $logo_foryou = get_field('logo_for_you')?>
-									<img class="logo-for-you d-none d-md-block" src="<?php echo $logo_foryou['url'] ?>" alt="<?php echo $logo_foryou['alt'] ?>" width="25%">
+									<img class="logo-for-you " src="<?php echo $logo_foryou['url'] ?>" alt="<?php echo $logo_foryou['alt'] ?>" width="25%">
 								</div>
 									<p class="foryou-text pr-5"><?php echo get_field('texte_manehome_for_you') ?> </p>
+									<a class="btn py-3 px-5 rounded bg-white text-dark" href="<?php echo apply_filters( 'wpml_home_url', get_option( 'home' ) ); ?>/contact">contactez-nous</a>
 							</div>
 							<?php $bg_img_foryou = get_field('image_fond_for_you')?>
 							<img class="bg-img ml-auto" src="<?php echo $bg_img_foryou['url'] ?>" alt="<?php echo $bg_img_foryou['alt'] ?>" width="65%">

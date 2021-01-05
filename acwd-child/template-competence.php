@@ -114,7 +114,7 @@ get_template_part( 'template-parts/content', 'header');
 									<div class="col-12 col-md-5 d-flex align-items-center">
 										<img class="img-competences" src="<?php echo $img_compétences; ?>" alt="<?php echo $img_compétences;?>" width="100%">
 									</div>
-									<div class="col-12 col-md-7 d-flex align-items-center position-relative">
+									<div class="col-12 col-md-6 d-flex align-items-center position-relative">
 										<div class="position-absolute d-flex flex-column">
 											<?php $nom = explode(" ", get_the_title(), 2); ?>
 											<span class="prenom"><?php echo $nom[0] ?></span>
@@ -128,12 +128,11 @@ get_template_part( 'template-parts/content', 'header');
 						<?php
 						endwhile;
 						endif;
-
 						// 4. On réinitialise à la requête principale (important)
 						wp_reset_postdata();
 						 ?>
 							<div class="col-6">
-								<div class="row justify-content-center align-items-center h-100 w-100">
+								<div class="d-flex justify-content-center align-items-center h-100 w-100">
 									<?php $img_last = get_field('dernier_bloc'); ?>
 									<img src="<?php echo $img_last['url'] ?>" alt="<?php echo $img_last['alt'] ?>" width="70%">
 								</div>
@@ -141,7 +140,6 @@ get_template_part( 'template-parts/content', 'header');
 						</div>
 					</section>
 					<?php get_template_part( 'template-parts/chiffres-cles'); ?>
-
 					<script type="text/javascript">
 					// jQuery(document).ready(function () {
 					// 	console.log('oui');
@@ -154,7 +152,5 @@ get_template_part( 'template-parts/content', 'header');
 					// });
 
 					</script>
-
-
 <?php
 get_footer();

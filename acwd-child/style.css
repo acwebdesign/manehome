@@ -36,6 +36,51 @@
 		align-items: center;
 }
 
+.navbar ul li:nth-child(7){
+	display: none;
+}
+
+.navbar-light .navbar-toggler{
+	color: black;
+	border : none;
+}
+
+i.fas.fa-bars{
+	color : #ffcc33;
+}
+@media only screen and (max-width:900px) {
+	.navbar ul li:nth-child(7){
+		display: block;
+	}
+}
+
+@media (max-width: 600px) {
+	.carousel-inner{
+		height: 50vh;
+	}
+	.carousel-item{
+		height: 50vh;
+	}
+	.carousel-item img{
+		object-fit: cover;
+
+	}
+	.carousel-item .position-absolute{
+		top: 25% !important;
+		left: 12% !important;
+	}
+	.slider-black, .slider-white{
+		font-size:1.7em !important;
+		text-align: center;
+	}
+	/* .carousel-item .btn{
+		padding-right :  2rem !important;
+		padding-left :  2rem !important;
+
+	} */
+
+}
+
 .bg-orange{
 	background-color: #ffcc33;
 }
@@ -62,7 +107,12 @@ h1{
 	font-weight: bold;
 	text-align: center;
 }
+@media (max-width: 600px) {
+	h1{
+		font-size: 1.55em;
 
+	}
+}
 h2{
 	font-size: 2em;
 	font-weight: bold;
@@ -174,6 +224,10 @@ h2{
   position: absolute;
 }
 
+@media (max-width: 600px) {
+	.flip .card .face p{
+	}
+}
 .flip h2{
 	color: #222222;
 }
@@ -216,6 +270,49 @@ h2{
 	z-index: 99999;
 }
 
+.btn-primary
+{
+  background-color: #ffcc33;
+  border-color: #ffcc33;
+
+}
+.btn-primary:hover
+{
+  background-color: #ffcc33;
+  border-color: #ffcc33;
+}
+.btn-rea{
+	color: black;
+}
+.img-realisation{
+	filter: grayscale(100%);
+	mix-blend-mode: luminosity;
+	opacity: 1;
+}
+
+.titre-realisation{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+	opacity: 0;
+	color: white;
+	font-size: 20px;
+	text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.bloc-realisation:hover .titre-realisation{
+	opacity: 1;
+}
+
+.bloc-realisation:hover .img-realisation{
+	filter: none;
+	mix-blend-mode: normal;
+}
+.titre-realisation,
+.img-realisation{
+	transition: all .3s;
+}
 @media (max-width: 600px) {
 	.realisations-img{
 		position: inherit;
@@ -316,7 +413,23 @@ h2{
 	color: grey;
 	text-decoration: underline;
 }
+@media (max-width: 600px) {
+	.qui_sommes_nous{
+		padding-bottom: 0!important;
+	}
+	.paragraphe-type-1{
+		padding-left: 15px !important;
+		padding-right: 15px!important;
+	}
+	.paragraphe-type-1 p {
+    margin-bottom: 1em;
+	}
+	.paragraphe_nous{
+		padding-left: 15px !important;
+		padding-right: 15px!important;
+	}
 
+}
 /* Chiffre clés */
 .sous-titre-cles{
 	color: white;
@@ -411,15 +524,19 @@ h2{
 }
 
 @media (max-width: 600px) {
+	.bloc-competence:hover img.img-competences{
+		width: 50%;
+	}
 
-	.bloc-competence .prenom, .nom{
+	.bloc-competence > div:first-child{
+		justify-content: center;
+		padding-bottom: 25px;
+	}
+
+	/* .bloc-competence .prenom, .nom{
 		font-size: 1em;
+	} */
 
-	}
-	.texte-competence {
-    font-size: 0.5em;
-
-	}
 }
 
 
@@ -615,8 +732,11 @@ footer a:hover{
 
 
 /* Template Galerie */
+
 .galerie .bloc_galerie img{
 	transition: transform .2s; /* Animation */
+	object-fit: cover;
+	height: 25vh;
 }
 .galerie .bloc_galerie img:hover{
 	transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
@@ -633,10 +753,21 @@ footer a:hover{
 /********************/
 
 /* Accueil - manehome-for-you */
-
-@media (max-width: 600px) {
-
 	.manehome-for-you .manehome-for-you-container{
+		position: absolute;
+
+	}
+@media (max-width: 600px) {
+	.manehome-for-you {
+		margin-bottom: 0!important;
+		padding: 0!important;
+	}
+	.manehome-for-you .manehome-for-you-container{
+		padding: 25px;
+		position: static;
+	}
+	.manehome-for-you .manehome-for-you-container >div{
+		justify-content: center;
 		padding-left: 0 !important;
 	}
 	.manehome-for-you img.logo-for-you{
@@ -651,15 +782,13 @@ footer a:hover{
 	}
 	.foryou-white{
 		font-size: 1.5em;
-		color: #ffcc33;
-		padding-right: 0;
+
 	}
 	.manehome-for-you .bg-img{
 		width: 100%;
 	}
 	.manehome-for-you .foryou-text{
 		font-size: 80%;
-		color: #222222;
 		padding-right: 0 !important;
 	}
 }
@@ -713,3 +842,20 @@ footer a:hover{
 
 
 /********************/
+/* Page contact */
+.container_dowload_plaquette{
+	background-color: #ffcc33;
+}
+.container_dowload_plaquette .btn{
+	color: black;
+	background-color: white;
+}
+
+/********************/
+
+
+.download_rea_img{
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+}

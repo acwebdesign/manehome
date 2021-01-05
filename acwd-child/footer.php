@@ -42,18 +42,23 @@
         <span class="footer-title">Suivez-nous!</span>
         <div class="social d-flex pb-2 mt-3">
           <?php if(!empty(get_theme_mod('facebook'))):?>
-            <a href="<?php echo get_theme_mod( 'facebook' ); ?>" class="mr-3">
+            <a href="<?php echo get_theme_mod( 'facebook' ); ?>" class="mr-3" target="_blank">
               <i class="fab fa-facebook-square fa-2x text-white"></i>
             </a>
           <?php endif;?>
-          <?php if(!empty(get_theme_mod('instagram'))):?>
-            <a href="<?php echo get_theme_mod( 'instagram' ); ?>" class="mr-3">
-              <i class="fab fa-instagram fa-2x text-white"></i>
+          <?php if(!empty(get_theme_mod('linkedin'))):?>
+            <a href="<?php echo get_theme_mod( 'linkedin' ); ?>" class="mr-3" target="_blank">
+              <i class="fab fa-linkedin fa-2x text-white"></i>
             </a>
           <?php endif;?>
-          <?php if(!empty(get_theme_mod('linkedin'))):?>
-            <a href="<?php echo get_theme_mod( 'linkedin' ); ?>" class="mr-3">
-              <i class="fab fa-linkedin fa-2x text-white"></i>
+          <?php if(!empty(get_theme_mod('youtube'))):?>
+            <a href="<?php echo get_theme_mod( 'youtube' ); ?>" class="mr-3" target="_blank">
+              <i class="fab fa-youtube fa-2x text-white"></i>
+            </a>
+          <?php endif;?>
+          <?php if(!empty(get_theme_mod('instagram'))):?>
+            <a href="<?php echo get_theme_mod( 'instagram' ); ?>" class="mr-3" target="_blank">
+              <i class="fab fa-youtube fa-2x text-white"></i>
             </a>
           <?php endif;?>
         </div>
@@ -80,9 +85,6 @@
       <div class="copyright col-12 col-md-4 text-left p-0">
         Copyright &copy; <?php echo date('Y'); ?> - <?php bloginfo('name'); ?>
         - <?php _e('Tous droits réservés', 'acwd'); ?>
-      </div>
-      <div class="realisation col-12 col-md-4 text-center p-0">
-        <?php _e('Réalisation', 'acwd'); ?> <a class="lien-footer"  href="https://acwd.fr">ACWD</a>
       </div>
       <div class="mentions col-12 col-md-4 text-right p-0">
         <a href="https://v3.manehome.fr/politique-de-confidentialite/

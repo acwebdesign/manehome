@@ -18,13 +18,14 @@
 		        <p class="titre-cles text-center"><?php echo get_field('titre_2', 'option') ?></p>
 					</div>
         </div>
-        <div class="row align-items-end pb-5 px-5">
+        <div class="row align-items-start pb-5 px-5">
           <?php if( have_rows('chiffres', 'option') ): ?>
               <?php while( have_rows('chiffres', 'option') ): the_row();
                   ?>
                   <div class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center">
-                      <img src="<?php echo get_sub_field('icon')['url']; ?>" alt="" class="w-25">
-                      <p class="row align-items-center text-grey"><span class="font-weight-bold text-white mb-0 mr-2 h4"><?php echo get_sub_field('chiffre'); ?></span> <?php echo get_sub_field('label'); ?></p>
+                      <img src="<?php echo get_sub_field('icon')['url']; ?>" alt="" class="w-25 pb-3">
+                      <span class="font-weight-bold text-white mb-0 mr-2 h4"><?php echo get_sub_field('chiffre'); ?></span>
+                      <p class="text-grey text-center"><?php echo get_sub_field('label'); ?></p>
                   </div>
               <?php endwhile; ?>
           <?php endif; ?>

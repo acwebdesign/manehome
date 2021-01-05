@@ -20,7 +20,7 @@ Template Name: Template Qui sommes nous
 get_header();
 get_template_part( 'template-parts/content', 'header');
 ?>
-    <section class="py-5">
+    <section class="qui_sommes_nous py-5">
       <div class="container position-relative">
         <div class="dots-left row">
           <div class="dot"></div>
@@ -104,12 +104,9 @@ get_template_part( 'template-parts/content', 'header');
           </div>
         </div>
         <div class="row my-5">
-          <div class=" col-12 col-lg-6 row px-5">
-            <div class="col-12">
-              <span class="texte-intro"><?php the_field('texte_intro') ?></span>
-              <img class="my-3 " src="<?php echo get_field('image_text')['url']; ?>" alt="" width="100%">
-
-            </div>
+          <div class=" col-12 col-lg-6 px-5 paragraphe_nous">
+            <span class="texte-intro"><?php the_field('texte_intro') ?></span>
+            <img class="my-3 " src="<?php echo get_field('image_text')['url']; ?>" alt="" width="100%">
           </div>
           <div class="col-12 col-lg-6 px-5 paragraphe-type-1">
             <?php the_field('texte'); ?>

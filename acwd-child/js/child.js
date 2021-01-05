@@ -58,4 +58,32 @@ $(window).on("load resize", function() {
     slideshow: false,
     sync: "#carousel"
   });
+
+	jQuery('.bloc-realisation').hover(function(){
+		jQuery(this).children('.titre-realisation').css('visibility', 'visible');
+	},function(){
+		jQuery(this).children('.titre-realisation').css('visibility', 'hidden');
+	});
+
+	jQuery('.btn-rea').click(function(){
+		btn = jQuery(this).data('category');
+		jQuery('.btn-rea').removeClass('btn-primary');
+		jQuery(this).addClass('btn-primary');
+		console.log(btn);
+		if (btn == "tout") {
+			// console.log("test");
+			jQuery('.bloc-realisation').hide();
+			jQuery('.bloc-realisation').toggle();
+		}
+		else if (btn=="") {
+
+		}
+		else {
+			jQuery('.bloc-realisation').hide();
+			jQuery('.bloc-realisation[data-cat="'+btn+'"]').toggle();
+		}
+	});
+
+
+
 });
