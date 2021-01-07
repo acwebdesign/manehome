@@ -127,12 +127,12 @@ get_header();
 							<div class="dot"></div>
 							<div class="dot"></div>
 						</div>
-						<div class="row">
-							<div class="col-12 col-md-6 px-5">
-								<div class="row">
+						<div class="row flip_parent">
+							<div class="col-12 col-lg-6 px-5">
+								<div class="row flip_container">
 									<?php if (have_rows('blocs_maitrise')):
 										while (have_rows('blocs_maitrise')): the_row(); ?>
-										<div class="col-12 col-md-6">
+										<div class="col-5 col-lg-6">
 											<div class="flip my-3">
 												<div class="card">
 													<div class="face front">
@@ -153,7 +153,7 @@ get_header();
 									<?php endwhile; endif; ?>
 								</div>
 							</div>
-							<div class="col-12 col-md-6 px-5 d-flex flex-column justify-content-center">
+							<div class="col-12 col-lg-6 px-5 d-flex flex-column justify-content-center">
 								<h1 class="small-title pb-3"><?php echo get_field('titre_maitrise') ?></h1>
 								<h2 class="pb-2"><?php echo get_field('sous_titre_maitrise') ?></h2>
 								<p><?php echo get_field('texte_maitrise') ?></p>

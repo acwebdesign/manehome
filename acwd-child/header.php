@@ -26,7 +26,7 @@
         <button class="navbar-toggler navbar-toggler-right position-absolute" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation" id="nav-bar-toggle">
-            Menu
+            <!-- Menu -->
             <i class="fas fa-bars"></i>
         </button>
         <?php
@@ -43,9 +43,9 @@
         );
         ?>
         <div class="social col-auto d-lg-flex justify-content-center pb-2 mt-2 mx-auto  d-none">
-            <a href="#" class="d-flex align-items-center mx-2 mr-4">
+            <button class="d-flex align-items-center mx-2 mr-4 btn-search" data-toggle="modal" data-target="#search">
                 <i class="fas fa-search text-secondary"></i>
-            </a>
+            </button>
             <a href="https://v3.manehome.fr/contact/" class="btn btn-secondary">Contactez-nous</a>
         </div>
 
@@ -68,6 +68,21 @@
         </div> -->
     </div>
 </nav>
+<div class="modal fade container_seach" id="search" tabindex="-1" aria-labelledby="searchLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="https://v3.manehome.fr/wp-content/uploads/logoManehomeBlanc.png" alt="logoManehomeBlanc" />
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="far fa-times-circle"></i></span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <?php echo get_search_form(); ?>
+      </div>
+    </div>
+  </div>
+</div>
 <div id="page" class="site">
     <!-- <header class="masthead" id="home">
         <div class="container d-flex h-100 align-items-center">

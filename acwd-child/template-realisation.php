@@ -20,7 +20,7 @@ get_template_part( 'template-parts/content', 'header');
 		<div class="col-12">
 			<h1 class="my-5"><?php echo get_field('titre_realisations') ?></h1>
 			<div class="row my-5">
-				<div class=" col-12 col-lg-6 row px-5">
+				<div class=" col-12 col-lg-6 row px-5 realisation-introduction">
 					<div class="col-12">
 						<span class="texte-intro"><?php the_field('texte_intro') ?></span>
 						<?php

@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Template mentions légales
+Template Name: Template politique de confidentialité
 */
 /**
 * The template for displaying legal mention
@@ -22,9 +22,6 @@ get_template_part( 'template-parts/content', 'header_black');
 
 ?>
 
-    <div>
-
-    </div>
 
 <?php
 get_footer();

@@ -95,7 +95,7 @@ get_template_part( 'template-parts/content', 'header');
 						</div>
 						<h1 class="py-3"><?php echo get_field('titre_competences') ?></h1>
 						<p class="chapo py-5"><?php echo get_field('chapo_competences') ?></p>
-						<div class="row">
+						<div class="row bloc-equipe">
 						<?php // 1. On définit les arguments pour définir ce que l'on souhaite récupérer
 							$args = array(
 							    'post_type' => 'equipe',
@@ -111,10 +111,10 @@ get_template_part( 'template-parts/content', 'header');
 							<div class="col-12 col-md-6 py-3 ">
 								<div class="bloc-competence row bg-orange py-4 h-100 w-100">
 									<?php $img_compétences = get_the_post_thumbnail_url(); ?>
-									<div class="col-12 col-md-5 d-flex align-items-center">
+									<div class="col-12 col-lg-6 d-flex align-items-center">
 										<img class="img-competences" src="<?php echo $img_compétences; ?>" alt="<?php echo $img_compétences;?>" width="100%">
 									</div>
-									<div class="col-12 col-md-6 d-flex align-items-center position-relative">
+									<div class="col-12 col-lg-6 d-flex align-items-center position-relative">
 										<div class="position-absolute d-flex flex-column">
 											<?php $nom = explode(" ", get_the_title(), 2); ?>
 											<span class="prenom"><?php echo $nom[0] ?></span>

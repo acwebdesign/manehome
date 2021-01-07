@@ -1,6 +1,8 @@
 <?php
 get_header();
 get_template_part( 'template-parts/content', 'header_actualites');
+$i=0;
+
 ?>
 
 <section class="py-5">
@@ -81,10 +83,45 @@ get_template_part( 'template-parts/content', 'header_actualites');
 			<div class="dot"></div>
 			<div class="dot"></div>
 		</div>
-		<div class="row">
+		<div class="row single-row">
 			<div class="col-md-9 row col-12 pb-5 order-md-1 order-2">
-				<div class="col-md-4 col-12">
-					<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" width="100%">
+				<div class="row col-md-4 col-12 ">
+					<div class="col-12">
+						<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" width="100%">
+					</div>
+					<div class="col-12 row ">
+						<?php		if( have_rows('galerie') ): while( have_rows('galerie') ): the_row(); $i++;?>
+							<div class="col-12 my-3">
+								<div class="col-12 bloc_galerie row" data-toggle="modal" data-target="#exampleModal<?php echo $i; ?>">
+									<?php
+									$image = get_sub_field('images');
+									if( !empty( $image ) ): ?>
+											<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="100%" data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+									<?php endif; ?>
+								</div>
+							</div>
+							<div class="modal fade " id="exampleModal<?php echo $i; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered modal-xl">
+									<div class="modal-content">
+										<div class="modal-header">
+											<?php the_custom_logo(); ?>
+
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body p-0">
+											<?php
+											$image = get_sub_field('images');
+											if( !empty( $image ) ): ?>
+												<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="100%" data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+											<?php endif; ?>
+										</div>
+									</div>
+								</div>
+							</div>
+						<?php		endwhile;	endif;?>
+					</div>
 				</div>
 				<div class="col-md-8 col-12">
 					<div class="position-relative w-100 p-5" style="background: #f6f6f6">

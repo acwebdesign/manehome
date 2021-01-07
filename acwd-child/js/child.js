@@ -84,6 +84,9 @@ $(window).on("load resize", function() {
 		}
 	});
 
+	$('.navbar ul li:nth-child(8)').attr('data-target', '#search');
+	$('.navbar ul li:nth-child(8)').attr('data-toggle', 'modal');
+
 
 
 });

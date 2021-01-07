@@ -16,7 +16,7 @@ get_header();
 get_template_part( 'template-parts/content', 'header');
 ?>
 
-					<section class="container position-relative py-5">
+					<section class="container position-relative py-5 template-reinventer">
 			        <div class="dots-left row">
 			          <div class="dot"></div>
 			          <div class="dot"></div>
@@ -96,22 +96,22 @@ get_template_part( 'template-parts/content', 'header');
 						<h1 class="pb-5"><?php echo get_field('titre_reinventer') ?></h1>
 						<?php if (have_rows('blocs_reinventer')):
 							while (have_rows('blocs_reinventer')): the_row(); ?>
-							<div class="py-5">
+							<div class="py-5 container-reinventer">
 								<div class="row mx-0">
-									<div class="img-reinventer px-5 col-3 d-flex align-items-center">
+									<div class="img-reinventer px-5 col-12 col-md-3 d-flex align-items-center">
 										<?php $img = get_sub_field('image') ?>
 										<img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>" width="100%">
 									</div>
-									<div class="col-9 pl-5 pr-0 text-grey">
+									<div class="col-12 col-md-9 pl-5 pr-0 text-grey">
 										<?php echo get_sub_field('texte') ?>
 									</div>
 								</div>
-								<div class="citation col-9 px-0 mr-0 mt-5 ml-auto row">
-									<div class="col-1 pl-0">
+								<div class="citation col-12 col-md-9 px-0 mr-0 mt-5 ml-auto row">
+									<div class="col-12 col-md-1 pl-0">
 										<?php $picto = get_sub_field('picto') ?>
 										<img src="<?php echo $picto['url'] ?>" alt="<?php echo $picto['alt'] ?>" width="100%">
 									</div>
-									<div class="col-11 py-3 text-grey">
+									<div class="col-12 col-md-11 py-3 text-grey">
 										<?php echo get_sub_field('citation') ?>
 									</div>
 								</div>

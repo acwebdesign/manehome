@@ -16,7 +16,7 @@ get_header();
 get_template_part( 'template-parts/content', 'header');
 ?>
 <main>
-	<section class="container">
+	<section class="container contact-container">
 		<div class="row py-5">
 			<div class="col-12 col-md-6 ">
 				<?php

@@ -17,7 +17,7 @@ get_template_part( 'template-parts/content', 'header');
 ?>
 
 <section class="py-5">
-	<div class="container position-relative">
+	<div class="container position-relative template-actualites">
 		<div class="row">
 			<div class="col">
 				<h1><?php echo get_the_title(); ?></h1>

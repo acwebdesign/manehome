@@ -22,7 +22,7 @@ get_template_part( 'template-parts/content', 'header');
 		transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
 	}
 </style>
-					<section class="container">
+					<section class="container presse">
 						<div class="row my-5 text-center ">
 							<div class="col">
 								<h1 class="mb-3"><?php echo get_field('titre_introduction') ?></h1>
@@ -40,7 +40,7 @@ get_template_part( 'template-parts/content', 'header');
 											<div class="face front">
 												<div class="inner text-center">
 													<div class="texte-face position-absolute">
-														<img src="https://img.icons8.com/metro/80/000000/download.png" class="pb-3"/>
+													<i class="fas fa-download fa-3x pb-3"></i>
 														<h2 class="text-uppercase"><?php echo get_sub_field('titre') ?></h2>
 													</div>
 
