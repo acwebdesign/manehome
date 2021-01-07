@@ -131,10 +131,10 @@ get_template_part( 'template-parts/content', 'header');
 						// 4. On réinitialise à la requête principale (important)
 						wp_reset_postdata();
 						 ?>
-							<div class="col-6">
+							<div class="col-12 col-md-6">
 								<div class="d-flex justify-content-center align-items-center h-100 w-100">
 									<?php $img_last = get_field('dernier_bloc'); ?>
-									<img src="<?php echo $img_last['url'] ?>" alt="<?php echo $img_last['alt'] ?>" width="70%">
+									<img src="<?php echo $img_last['url'] ?>" alt="<?php echo $img_last['alt'] ?>" width="100%">
 								</div>
 							</div>
 						</div>

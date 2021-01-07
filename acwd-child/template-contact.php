@@ -20,9 +20,15 @@ get_template_part( 'template-parts/content', 'header');
 		<div class="row py-5">
 			<div class="col-12 col-md-6 ">
 				<?php
+				/*
+					Si la case dont la valeur est professionelle est coché alors ajouté l'attribue required au champ entreprise
+				*/
+				?>
+				<?php
 				$contact = get_field('formulaire_contact');
 				echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]');
 				?>
+
 			</div>
 			<div class="col-12 col-md-6">
 				<div class="contact-coordonnee pl-5">
@@ -34,13 +40,13 @@ get_template_part( 'template-parts/content', 'header');
 					<div class="my-3"><a class="text-dark my-5 py-5" href="mailto:<?php echo get_theme_mod('company_email'); ?>"><i class="fas fa-envelope text-warning fa-lg mr-3"></i> <?php echo get_theme_mod('company_email'); ?></a></div>
 					<div class="my-3"><a class="text-dark my-5 py-5" href="tel:<?php echo '+33'.substr(str_replace(' ','',get_theme_mod('company_phone')),1); ?>"><i class=" text-warning fa-lg mr-3 fas fa-phone-alt"></i> <?php echo get_theme_mod('company_phone'); ?></a></div>
 				</div>
-					<div>
-						<?php
-						$image = get_field('image_localisation');
-						if( !empty( $image ) ): ?>
-						<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="100%"/>
-					<?php endif; ?>
-				</div>
+				<div class="col-10 col-md-12 mx-auto">
+					<?php
+					$image = get_field('image_localisation');
+					if( !empty( $image ) ): ?>
+					<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="100%"/>
+				<?php endif; ?>
+			</div>
 			</div>
 		</div>
 	</section>

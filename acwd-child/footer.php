@@ -67,12 +67,15 @@
         <span class="footer-title">Newsletter</span>
         <div class="mt-3">
           <p>Recevez toutes nos actualités</p>
-          <form method="post" action="">
+          <!-- <form method="post" action="">
             <div class="d-flex flex-nowrap">
               <input class="border-0 rounded-left px-3 py-2" style="width: calc(100% - 44.8px);" type="text" name="mail" value="" placeholder="Entrez votre Email">
               <button class="bg-warning border-0 rounded-right px-3 py-2" type="submit"><i class="far fa-paper-plane text-white"></i></button>
             </div>
-          </form>
+          </form> -->
+          <?php
+  				echo do_shortcode('[contact-form-7 id="719" title="Newsletter"]');
+  				?>
         </div>
       </div>
 
@@ -100,6 +103,9 @@
 ?>
 </div><!-- #page -->
 <script>
+$(function(){
+    $('a.zoombox').zoombox();
+});
 /*
 (function ($) {
 "use strict"; // Start of use strict

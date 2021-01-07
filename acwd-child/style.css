@@ -26,7 +26,7 @@
 
 .header-global
 {
-	  height:427px;
+	  height:657px;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -52,7 +52,13 @@ i.fas.fa-bars{
 
 @media only screen and (max-width:600px) {
 	#nav-bar-toggle {
-	    top: 20px;
+	  top: 20px;
+	}
+	.header-global
+	{
+		margin-top: 70px;
+		width: 100%;
+    height: 25vh;
 	}
 }
 @media only screen and (max-width:990px) {
@@ -98,15 +104,15 @@ i.fas.fa-bars{
 
 @media (max-width: 600px) {
 	.carousel-inner{
-		height: 50vh;
+		height: 100%;
 	}
-	.carousel-item{
-		height: 50vh;
+	.carousel-item > div > div:first-child{
+		margin-bottom: 0!important;
 	}
-	.carousel-item img{
-		object-fit: cover;
+	.carousel-item {
+		margin-top: 70px;
+	}
 
-	}
 	.carousel-item .position-absolute{
 		top: 25% !important;
 		left: 12% !important;
@@ -182,6 +188,12 @@ body{
 .container_seach .close span i{
 		color: white !important;
 }
+
+.archive-item .col img{
+	height: 250px;
+	object-fit: contain;
+}
+
 @media (max-width: 990px) {
 	.container_seach .modal-header img{
 		margin: auto;
@@ -293,14 +305,14 @@ h2{
 .flip .card {
     -webkit-transform-style: preserve-3d;
     -webkit-transition: 0.5s;
-    transform-style: preserve-3d;
+     transform-style: preserve-3d; /*un éléments sont positionnés dans l'espace tridimensionnel ou s'ils sont aplatis dans le plan de l'élément. */
     transition: 0.5s;
     background-color: #fff;
 
 }
 .flip .card .face {
   -webkit-backface-visibility: hidden ;
-    backface-visibility: hidden ;
+  backface-visibility: hidden ; /* indique si la face arrière d'un élément doit être visible lorsqu'elle est orientée vers l'utilisateur. */
    z-index: 2;
 	 width: 100%;
 }
@@ -315,12 +327,23 @@ h2{
   position: absolute;
 }
 
-@media (max-width: 600px) {
-	.flip .card .face p{
-	}
-}
 .flip h2{
 	color: #222222;
+}
+
+@media (max-width: 600px) {
+	.flip{
+		margin-top: 0 !important;
+	}
+	/* .flip_parent > div:first-child, div:nth-child(2){
+		padding-left: 15!important;
+		padding-right: 0!important;
+
+	} */
+
+
+
+
 }
 
 /* Accueil - manehome-for-you */
@@ -502,6 +525,14 @@ h2{
 .img-realisation{
 	transition: all .3s;
 }
+
+.bloc-realisation{
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+	}
 @media (max-width: 600px) {
 	.realisations-img{
 		position: inherit;
@@ -866,21 +897,53 @@ h2{
 .last-actu-cache:hover{
 	opacity: 1;
 }
+
+.actualite_encart{
+	height: 300px;
+}
+.actualite_encart img{
+	height: 100%;
+	object-fit: cover;
+}
 @media (max-width : 600px){
 
 }
 
 /* Single Actualités */
-.single-row {
-
-
+.single-zoombox {
+	padding-left: 5px!important;
+	padding-right: 5px!important;
 }
+.single-zoombox img{
+	height: 200px;
+	object-fit: cover;
+}
+
 .single-row .bloc_galerie{
 	padding-left: 0!important;
 	padding-right: 0!important;
 	margin-left: 0!important;
 
 }
+
+@media (max-width : 990px){
+	.single-zoombox {
+		padding-top: 5px!important;
+		padding-bottom: 5px!important;
+	}
+	.single-zoombox img{
+		height: 150px;
+		object-fit: cover;
+	}
+}
+@media (max-width : 600px){
+	.single-row .row:first-child {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+}
+
 
 /**************************/
 /* Valeur & Engagement */
@@ -979,6 +1042,11 @@ footer .text-orange{
 }
 footer a:hover{
 	opacity: .5;
+}
+
+.input-mail-footer
+{
+width: calc(100% );
 }
 
 @media (max-width: 600px) {
@@ -1099,6 +1167,14 @@ footer a:hover{
 input[type="file"] {
     display: none;
 }
+
+.form-group.required label:after {
+  content:" *";color:red;
+}
+
+.custom-file-label::after{
+	content: "Télécharger";
+}
 @media (max-width: 600px) {
 	.contact-container .row {
 		display: flex;
@@ -1112,6 +1188,10 @@ input[type="file"] {
 	}
 	.container_dowload_plaquette .container .row > div:last-child{
 		text-align: center;
+	}
+
+	.newsletter_container{
+		width: 70%;
 	}
 }
 
@@ -1134,5 +1214,14 @@ input[type="file"] {
 	.presse .texte-face h2{
 		font-size: 1.5em;
 	}
+}
+	/********************/
+	/* Page Cookies */
+
+.cookie-notice-container .btn-cookies{
+	background-color: #212529;
+}
+.cookie-notice-container .cn-close-icon:after, .cn-close-icon:before{
+	background-color: #212529;
 }
 	/********************/

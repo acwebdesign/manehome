@@ -39,8 +39,8 @@ get_template_part( 'template-parts/content', 'header');
                $wp_actus->the_post();?>
 							 	<div class="col-md-6 col-12 bloc-actu">
 									<a href="<?php echo get_permalink(); ?>">
-										<div class="position-relative">
-											<div class="position-absolute bg-orange w-100 h-100 actu-cache" ></div>
+										<div class="position-relative actualite_encart">
+											<div class="position-absolute actualite_encart_img bg-orange w-100 h-100 actu-cache" ></div>
 											<img src="<?php echo get_the_post_thumbnail_url();?>" alt="" width="100%">
 											<div class="d-flex position-absolute align-items-start" style="top:0; left:0;">
 												<div class="bg-orange d-flex flex-column px-2 pt-2 pb-1 text-center">
@@ -62,9 +62,26 @@ get_template_part( 'template-parts/content', 'header');
 				<div class="col-md-3 col-12 pb-5 order-md-2 order-1 d-flex flex-column">
 					<ul class="categories m-0 pl-0 text-center">
 						<li>Catégories</li>
-						<li><a href="#">Chantier (2)</a></li>
-						<li><a href="#">Manehome (1)</a></li>
-						<li><a href="#">Technique et réglementation</a></li>
+						<?php
+						$categories = get_categories( array(
+							'orderby' => 'name',
+							'parent'  => 0
+						) );
+
+						foreach ( $categories as $category ) {
+							$link = get_category_link( $category->term_id );
+							$name = $category->name;
+							$slug = $category->slug;
+							if ($slug != "non-classe") {
+								?>
+								<!-- <button class="btn-rea btn btn-light mx-2" data-category="<?php echo $slug; ?>">
+									<?php echo $name; ?>
+								</button> -->
+								<li><a href="<?php echo $slug; ?> "><?php echo $name; ?></a></li>
+
+								<?php
+							}
+						} ?>
 					</ul>
 					<div class="d-flex flex-column last-actu text-center pt-5">
 						<span>Article Récent</span>

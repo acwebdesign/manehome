@@ -26,9 +26,7 @@ get_template_part( 'template-parts/content', 'header');
 						<div class="row my-5 text-center ">
 							<div class="col">
 								<h1 class="mb-3"><?php echo get_field('titre_introduction') ?></h1>
-								<p class="chapo">
-									<?php echo get_field('texte_introduction', false,false) ?>
-								</p>
+									<?php echo get_field('texte_introduction') ?>
 							</div>
 						</div>
 						<div class="row justify-content-center pb-5">

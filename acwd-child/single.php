@@ -1,7 +1,7 @@
 <?php
 get_header();
 get_template_part( 'template-parts/content', 'header_actualites');
-$i=0;
+// $i=0;
 
 ?>
 
@@ -84,13 +84,13 @@ $i=0;
 			<div class="dot"></div>
 		</div>
 		<div class="row single-row">
-			<div class="col-md-9 row col-12 pb-5 order-md-1 order-2">
-				<div class="row col-md-4 col-12 ">
-					<div class="col-12">
+			<div class="col-md-9 row col-12 pb-5 order-md-1 order-2 mx-auto">
+				<div class="col-md-4 col-12 justify-content-center  ">
+					<!-- <div class="col-12">
 						<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" width="100%">
-					</div>
-					<div class="col-12 row ">
-						<?php		if( have_rows('galerie') ): while( have_rows('galerie') ): the_row(); $i++;?>
+					</div> -->
+					<div class="col-12 ">
+						<!-- <?php		if( have_rows('galerie') ): while( have_rows('galerie') ): the_row(); $i++;?>
 							<div class="col-12 my-3">
 								<div class="col-12 bloc_galerie row" data-toggle="modal" data-target="#exampleModal<?php echo $i; ?>">
 									<?php
@@ -120,6 +120,19 @@ $i=0;
 									</div>
 								</div>
 							</div>
+						<?php		endwhile;	endif;?> -->
+						<?php		if( have_rows('galerie') ): while( have_rows('galerie') ): the_row(); ?>
+							<div class="col-12 pb-2 single-zoombox ">
+								<div class="col-12 bloc_galerie row">
+									<?php
+									$image = get_sub_field('images');
+									if( !empty( $image ) ): ?>
+											<a class="zoombox zgallery1" href="<?php echo esc_url($image['url']); ?>">
+												<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="100%"/>
+											</a>
+									<?php endif; ?>
+								</div>
+							</div>
 						<?php		endwhile;	endif;?>
 					</div>
 				</div>
@@ -141,14 +154,27 @@ $i=0;
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3 col-12 pb-5 order-md-2 order-1 d-flex flex-column">
-				<ul class="categories m-0 pl-0 text-center">
+			<div class="d-none d-md-block col-md-3 pb-5 order-md-2 order-1  flex-column">
+				<ul class=" categories m-0 pl-0 text-center">
 					<li>Catégories</li>
-					<li><a href="#">Chantier (2)</a></li>
-					<li><a href="#">Manehome (1)</a></li>
-					<li><a href="#">Technique et réglementation</a></li>
+					<?php
+					$categories = get_categories( array(
+						'orderby' => 'name',
+						'parent'  => 0
+					) );
+
+					foreach ( $categories as $category ) {
+						$link = get_category_link( $category->term_id );
+						$name = $category->name;
+						$slug = $category->slug;
+						if ($slug != "non-classe") {
+							?>
+							<li><a href="<?php echo $slug; ?>"><?php echo $name; ?></a></li>
+							<?php
+						}
+					} ?>
 				</ul>
-				<div class="d-flex flex-column last-actu text-center pt-5">
+				<div class=" d-flex flex-column last-actu text-center pt-5">
 					<span>Article Récent</span>
 					<?php
 					$last_actus = array(
@@ -168,10 +194,10 @@ $i=0;
 											<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" width="100%">
 										</a>
 					<?php endwhile; endif; wp_reset_postdata(); ?>
-					<form id="search" class="search-actu p-3 text-left" action="" method="get">
+					<!-- <form id="search" class="search-actu p-3 text-left" action="" method="get">
 						<i class="fas fa-search fa-lg text-grey" style="cursor: pointer"></i>
 						<input id="search-bar" type="text" name="search" value="" class="w-100 border-0" style="display:none">
-					</form>
+					</form> -->
 				</div>
 			</div>
 		</div>

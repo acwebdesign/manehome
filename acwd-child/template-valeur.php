@@ -21,9 +21,7 @@ get_template_part( 'template-parts/content', 'header_black');
 			<div class="row my-5 text-center ">
 				<div class="col">
 					<h1 class="mb-3"><?php echo get_field('titre_introduction') ?></h1>
-					<p class="chapo">
-						<?php echo get_field('texte_introduction', false,false) ?>
-					</p>
+						<?php echo get_field('texte_introduction') ?>
 				</div>
 			</div>
 			<div class="row my-5">
@@ -36,17 +34,13 @@ get_template_part( 'template-parts/content', 'header_black');
 				</div>
 				<div class="col-12 col-lg-6 paragraphe-type-1">
 					<h2 class="mb-3"><?php echo get_field('titre_valeurs_et_engagements') ?></h2>
-					<p>
-						<?php echo get_field('texte_valeurs_et_engagements', false,false) ?>
-					</p>
+						<?php echo get_field('texte_valeurs_et_engagements') ?>
 				</div>
 			</div>
 			<div class="row my-5 valeurs_engagements_patenaires">
 				<div class="col-12 col-lg-6">
 					<h2 class="mb-3"><?php echo get_field('titre_partenaires') ?></h2>
-					<p>
-						<?php echo get_field('texte_partenaires', false,false) ?>
-					</p>
+						<?php echo get_field('texte_partenaires') ?>
 				</div>
 				<div class="col-12 col-lg-6">
 					<?php
@@ -70,7 +64,7 @@ get_template_part( 'template-parts/content', 'header_black');
 						<?php
 						if( have_rows('liste_charte_qualite') ): while( have_rows('liste_charte_qualite') ): the_row(); ?>
 			        <li>
-								<p><i class="fas fa-check pr-2 fa-lg"></i><?php the_sub_field('qualite',false,false); ?></p>
+								<?php the_sub_field('qualite'); ?>
 			        </li>
 					  <?php endwhile; endif; ?>
 					</ul>

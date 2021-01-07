@@ -128,7 +128,7 @@ get_header();
 							<div class="dot"></div>
 						</div>
 						<div class="row flip_parent">
-							<div class="col-12 col-lg-6 px-5">
+							<div class="col-12 col-lg-6 px-5 d-none d-md-block">
 								<div class="row flip_container">
 									<?php if (have_rows('blocs_maitrise')):
 										while (have_rows('blocs_maitrise')): the_row(); ?>
@@ -138,13 +138,41 @@ get_header();
 													<div class="face front">
 														<div class="inner">
 															<?php $bg_img = get_sub_field('bg_img')?>
-															<img src="<?php echo $bg_img['url'] ?>" alt="<?php echo $bg_img['alt'] ?>" width="100%">														</div>
+															<img src="<?php echo $bg_img['url'] ?>" alt="<?php echo $bg_img['alt'] ?>" width="100%">
+														</div>
 													</div>
 													<div class="face back">
 														<div class="inner row justify-content-center align-items-center">
 															<p class="position-absolute text-center"><?php echo get_sub_field('texte_au_survol') ?></p>
 															<?php $bg_img_hover = get_sub_field('bg_img_hover')?>
 															<img src="<?php echo $bg_img_hover['url'] ?>" alt="<?php echo $bg_img_hover['alt'] ?>" width="100%">
+														</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<?php endwhile; endif; ?>
+								</div>
+							</div>
+							<div class="col-12 col-lg-6 px-5 d-block d-md-none">
+								<div class="row flip_container">
+									<?php if (have_rows('blocs_maitrise')):
+										while (have_rows('blocs_maitrise')): the_row(); ?>
+										<div class="col-5 col-lg-6">
+											<div class="flip my-3">
+												<div class="card">
+													<div class="face front">
+														<div class="inner row justify-content-center align-items-center">
+															<p class="position-absolute text-center"><?php echo get_sub_field('texte_au_survol') ?></p>
+															<?php $bg_img_hover = get_sub_field('bg_img_hover')?>
+															<img src="<?php echo $bg_img_hover['url'] ?>" alt="<?php echo $bg_img_hover['alt'] ?>" width="100%">
+														</div>
+
+													</div>
+													<div class="face back">
+														<div class="inner">
+															<?php $bg_img = get_sub_field('bg_img')?>
+															<img src="<?php echo $bg_img['url'] ?>" alt="<?php echo $bg_img['alt'] ?>" width="100%">
 														</div>
 												</div>
 											</div>

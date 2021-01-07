@@ -46,7 +46,7 @@ $posts = new WP_Query($args);
 <div class="container">
 	<div class="row my-2">
 		<div class="col-12 mx-auto d-flex justify-content-center flex-wrap">
-			<button class="btn-rea btn btn-tout btn-primary mx-2" data-category="tout">
+			<button class="btn-rea btn btn-anima btn-tout btn-primary mx-2" data-category="tout">
 				Tout
 			</button>
 			<?php
@@ -61,7 +61,7 @@ $posts = new WP_Query($args);
 				$slug = $category->slug;
 				if ($slug != "non-classe") {
 					?>
-					<button class="btn-rea btn btn-light mx-2" data-category="<?php echo $slug; ?>">
+					<button class="btn-rea btn-anima btn btn-light mx-2" data-category="<?php echo $slug; ?>">
 						<?php echo $name; ?>
 					</button>
 					<?php

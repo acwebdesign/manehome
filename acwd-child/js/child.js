@@ -84,9 +84,13 @@ $(window).on("load resize", function() {
 		}
 	});
 
+//// Bouton de recherche en mobile
 	$('.navbar ul li:nth-child(8)').attr('data-target', '#search');
 	$('.navbar ul li:nth-child(8)').attr('data-toggle', 'modal');
 
-
+//// Page réalisation fluidité de la galerie
+	// $(".btn-anima").click(function(){
+  // 	$(".bloc-realisation").fadeIn("10");
+	// });
 
 });
