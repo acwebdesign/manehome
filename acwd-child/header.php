@@ -42,8 +42,8 @@
                 'walker' => new WP_Bootstrap_Navwalker())
         );
         ?>
-        <div class="social col-auto d-lg-flex justify-content-center pb-2 mt-2 mx-auto  d-none">
-            <button class="d-flex align-items-center mx-2 mr-4 btn-search" data-toggle="modal" data-target="#search">
+        <div class="social col-auto d-lg-flex justify-content-center pb-2 mt-2 mx-0 px-0 d-none">
+            <button class="d-flex align-items-center mx-xl-2 mx-0 btn-search" data-toggle="modal" data-target="#search">
                 <i class="fas fa-search text-secondary"></i>
             </button>
             <a href="https://v3.manehome.fr/contact/" class="btn btn-secondary">Contactez-nous</a>

@@ -81,7 +81,7 @@ $posts = new WP_Query($args);
 				<a href="<?php echo get_permalink();?> ">
 					<div class="bg-orange">
 						<?php $img_compétences = get_the_post_thumbnail_url(); ?>
-						<img class="img-realisation" src="<?php echo $img_compétences; ?>" alt="<?php echo $img_compétences;?>" width="100%">
+						<img class="img-realisation" src="<?php echo $img_compétences; ?>" alt="<?php echo $img_compétences;?>" height="186px" width="100%">
 					</div>
 					<span class="titre-realisation"><?php the_title(); ?></span>
 				</a>
