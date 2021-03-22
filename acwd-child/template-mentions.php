@@ -18,12 +18,15 @@ Template Name: Template mentions légales
 
 
 get_header();
-get_template_part( 'template-parts/content', 'header_black');
+get_template_part( 'template-parts/content', 'header');
 
 ?>
-
-    <div>
-
+    <div class="container my-5 py-3">
+      <div class="row">
+        <div class="col">
+          <?php the_content(); ?>
+        </div>
+      </div>
     </div>
 
 <?php

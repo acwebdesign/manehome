@@ -84,7 +84,49 @@ get_template_part( 'template-parts/content', 'header');
 	<section class="single-realisation container">
 		<div class="row">
 			<div class="col-12 col-md-6">
-				<div id="slider" class="flexslider">
+				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+				  <div class="carousel-inner">
+						<?php
+						$i=0;
+						if( have_rows('galerie') ): while( have_rows('galerie') ): the_row(); ?>
+							<?php
+							$image = get_sub_field('image');
+							if( !empty( $image ) ):
+								?>
+						    <div class="carousel-item <?php echo ($i == 0) ? "active" : "" ; ?>">
+						      <img class="d-block w-100" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" data-toggle="modal" data-target="#exampleModal<?php echo $i; ?>">
+						    </div>
+								<?php $i++; endif; ?>
+						<?php  endwhile; endif; ?>
+				  </div>
+				  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+				<div class="d-flex flex-wrap">
+					<?php
+					$i=0;
+					if( have_rows('galerie') ): while( have_rows('galerie') ): the_row(); ?>
+						<?php
+						$image = get_sub_field('image');
+						if( !empty( $image ) ):
+							?>
+							 <div data-target="#carouselExampleControls" data-slide-to="<?php echo $i; ?>" class="col-3 col-md-3 px-0 <?php echo ($i == 0) ? "active" : "" ; ?>">
+									<img class="d-block w-100 img-indicator border border-light" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" >
+								</div>
+							<?php $i++; endif; ?>
+					<?php  endwhile; endif; ?>
+
+
+				</div>
+
+				<!-- <div id="slider" class="flexslider">
 					<ul class="slides">
 						<?php
 						$i=0;
@@ -101,8 +143,8 @@ get_template_part( 'template-parts/content', 'header');
 							</li>
 						<?php endwhile; endif; ?>
 					</ul>
-				</div>
-				<div id="carousel" class="flexslider">
+				</div> -->
+				<!-- <div id="carousel" class="flexslider">
 					<ul class="slides">
 						<?php if( have_rows('galerie') ): while( have_rows('galerie') ): the_row();?>
 							<li>
@@ -116,10 +158,10 @@ get_template_part( 'template-parts/content', 'header');
 							</li>
 						<?php endwhile; endif; ?>
 					</ul>
-				</div>
+				</div> -->
 				<?php
 				$i=0;
-				if( have_rows('galerie') ): while( have_rows('galerie') ): the_row();  $i++;?>
+				if( have_rows('galerie') ): while( have_rows('galerie') ): the_row();  ?>
 					<div class="modal fade " id="exampleModal<?php echo $i; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						<div class="modal-dialog modal-dialog-centered modal-xl">
 							<div class="modal-content">
@@ -140,11 +182,11 @@ get_template_part( 'template-parts/content', 'header');
 						</div>
 					</div>
 				</div>
-			<?php endwhile; endif; ?>
+			<?php $i++; endwhile; endif; ?>
 		</div>
 		<div class="col-12 col-md-6  ">
 			<div class="py-5 px-3 caracteristiques-container">
-				<h2><?php echo get_field("titre"); ?></h2>
+				<h1><?php echo get_field("titre"); ?></h1>
 				<div class="row col-12 caracteristiques">
 					<!-- <?php if( have_rows('caracteristiques') ): while( have_rows('caracteristiques') ): the_row();?>
 						<div class="col-12 col-md-3 py-2 caracteristiques-titre">

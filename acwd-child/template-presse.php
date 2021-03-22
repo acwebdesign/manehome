@@ -22,7 +22,7 @@ get_template_part( 'template-parts/content', 'header');
 		transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
 	}
 </style>
-					<section class="container presse">
+				<section class="container presse">
 						<div class="row my-5 text-center ">
 							<div class="col">
 								<h1 class="mb-3"><?php echo get_field('titre_introduction') ?></h1>
@@ -57,6 +57,35 @@ get_template_part( 'template-parts/content', 'header');
 								</a>
 							</div>
 							<?php endwhile; endif; ?>
+						</div>
+
+					</section>
+					<section class="container_dowload_plaquette">
+						<div class="container">
+							<div class="row py-3 justify-content-center align-items-center text-uppercase">
+								<div class="col-12 text-center h3  mt-3 foryou-black">
+									Ils parlent de nous
+								</div>
+
+									<?php if( have_rows('on_parle_de_nous') ): ?>
+								 <div class="col-12">
+									 <div class="container">
+									 	<div class="row">
+
+
+								    <?php while( have_rows('on_parle_de_nous') ): the_row();
+								        $image = get_sub_field('logo');
+							        ?>
+											<a class="col-6 col-md-3" href="<?php the_sub_field('liens'); ?>" target="_blank">
+						            <img src="<?php echo $image['url']; ?>" alt="" class="image-parle">
+											</a>
+								    <?php endwhile; ?>
+										</div>
+									 </div>
+									</div>
+
+								<?php endif; ?>
+							</div>
 						</div>
 					</section>
 

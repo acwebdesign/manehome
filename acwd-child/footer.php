@@ -58,7 +58,7 @@
           <?php endif;?>
           <?php if(!empty(get_theme_mod('instagram'))):?>
             <a href="<?php echo get_theme_mod( 'instagram' ); ?>" class="mr-3" target="_blank">
-              <i class="fab fa-youtube fa-2x text-white"></i>
+              <i class="fab fa-instagram fa-2x text-white"></i>
             </a>
           <?php endif;?>
         </div>
@@ -90,10 +90,10 @@
         - <?php _e('Tous droits réservés', 'acwd'); ?>
       </div>
       <div class="mentions col-12 col-md-4 text-right p-0">
-        <a href="https://v3.manehome.fr/politique-de-confidentialite/
+        <a href="https://manehome.fr/politique-de-confidentialite/
         " class="lien-footer" >Politique de confidentialité</a>
         -
-        <a href="https://v3.manehome.fr/mentions-legales/" class="lien-footer" >Mentions légales</a>
+        <a href="https://manehome.fr/mentions-legales/" class="lien-footer" >Mentions légales</a>
       </div>
     </div>
   </div>

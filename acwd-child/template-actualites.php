@@ -103,10 +103,10 @@ get_template_part( 'template-parts/content', 'header');
 												<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" width="100%">
 											</a>
 						<?php endwhile; endif; wp_reset_postdata(); ?>
-						<form id="search" class="search-actu p-3 text-left" action="" method="get">
+						<!-- <form id="search" class="search-actu p-3 text-left" action="" method="get">
 							<i class="fas fa-search fa-lg text-grey" style="cursor: pointer"></i>
 							<input id="search-bar" type="text" name="search" value="" class="w-100 border-0" style="display:none">
-						</form>
+						</form> -->
 					</div>
 				</div>
 		</div>

@@ -97,3 +97,126 @@ nav .menu-item a:hover
   color: #fed31a!important;
   margin-right: 10px!important;
 }
+.btn-nav-contact
+{
+  background-color: rgba(173, 167, 147, 0.47);
+}
+
+@media (max-width: 600px){
+  .slider-black .slider-white {
+      font-size: 1.2em !important;
+
+  }
+}
+.image-parle
+{
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+.img-indicator
+{
+  height: 125px;
+  object-fit: cover;
+}
+.img-indicator:hover
+{
+  cursor: pointer;
+}
+
+
+
+/*Erreur 404*/
+
+.bandeau-erreur{
+
+  height: 100vh;
+
+}
+
+.error-content {
+  font-family: navigo, sans-serif;
+
+    height: 100%;
+
+    width: 100%;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    /* background-color: rgba(254, 165, 25, 0.48); */
+
+}
+
+
+.img-404
+{
+  object-fit: cover;
+}
+.error-titre{
+  font-family: navigo, sans-serif;
+  position: absolute;
+
+  left: 15%;
+
+  max-width: 495px;
+
+  border-bottom: 4px solid #FEA51A;
+
+  color: #FFF;
+
+
+  font-size: 24px;
+
+  font-weight: bold;
+
+}
+
+
+
+.error-text{
+
+  font-size: 3.5em;
+
+  line-height: 1.5em;
+
+}
+
+
+
+.error-text span{
+
+  font-size: 1.6em;
+
+  font-weight: bolder;
+
+}
+
+
+
+.error-link{
+
+  position: absolute;
+
+  margin-top: 30%;
+
+  left: 16.5%;
+
+  color: #FFF;
+
+  font-weight: bold;
+
+  font-size: 1em;
+
+}
+
+
+
+.error-link:hover{
+
+  color : #FFF;
+
+}

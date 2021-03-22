@@ -18,10 +18,15 @@ Template Name: Template politique de confidentialité
 
 
 get_header();
-get_template_part( 'template-parts/content', 'header_black');
+get_template_part( 'template-parts/content', 'header');
 
 ?>
-
-
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <?php the_content(); ?>
+      </div>
+    </div>
+  </div>
 <?php
 get_footer();
