@@ -36,23 +36,9 @@ get_template_part( 'template-parts/content', 'header');
 		</div>
 	</div>
 </div>
-<?php
-	if (get_the_ID() == 187) {
-		$term = 'professionnel';
-	}else if (get_the_ID() == 907) {
-		$term = 'particulier';
-	}
-?>
 <?php $args = array(
 	'post_type' => "realisations",
 	'posts_per_page'=> -1,
-	'tax_query' => array(
-		array (
-				'taxonomy' => 'category',
-				'field' => 'slug',
-				'terms' => $term,
-		)
-	),
 	'order' => 'ASC',
 );
 $posts = new WP_Query($args);
@@ -60,7 +46,7 @@ $posts = new WP_Query($args);
 <div class="container">
 	<div class="row my-2">
 		<div class="col-12 mx-auto d-flex justify-content-center flex-wrap">
-			<button class="btn-rea btn btn-anima btn-light btn-tout btn-primary mx-2 mb-2" data-category="tout">
+			<button class="btn-rea btn btn-anima btn-tout btn-primary mx-2" data-category="tout">
 				Tout
 			</button>
 			<?php
@@ -69,38 +55,13 @@ $posts = new WP_Query($args);
 				'parent'  => 0
 			) );
 
-			$terms = get_terms( array(
-			    'taxonomy' => 'type',
-			    'hide_empty' => true,
-					'orderby' => 'name',
-					'parent'  => 0
-			) );
-			// preprint($terms);
-			foreach ( $terms as $category ) {
+			foreach ( $categories as $category ) {
 				$link = get_category_link( $category->term_id );
 				$name = $category->name;
 				$slug = $category->slug;
-				$args_terms = array(
-					'post_type' => "realisations",
-					'posts_per_page'=> -1,
-					'tax_query' => array(
-						'relation' => 'AND',
-						array (
-								'taxonomy' => 'category',
-								'field' => 'slug',
-								'terms' => $term,
-						),
-						array (
-								'taxonomy' => 'type',
-								'field' => 'slug',
-								'terms' => $slug,
-						)
-					)
-				);
-				$term_query = new WP_Query($args_terms);
-				if ($slug != "non-classe" && $term_query->have_posts()) {
+				if ($slug != "non-classe") {
 					?>
-					<button class="btn-rea btn-anima btn btn-light mx-2 mb-2" data-category="<?php echo $slug; ?>">
+					<button class="btn-rea btn-anima btn btn-light mx-2" data-category="<?php echo $slug; ?>">
 						<?php echo $name; ?>
 					</button>
 					<?php
@@ -114,8 +75,7 @@ $posts = new WP_Query($args);
 		<?php
 		while ($posts->have_posts()) :
 			$posts->the_post();
-			$categories = $term_obj_list = get_the_terms( $post->ID, 'type' );
-
+			$categories = get_the_category();
 			?>
 			<div class="col-12 col-md-4 bloc-realisation my-2 " data-cat="<?php echo $categories[0]->slug; ?>">
 				<a href="<?php echo get_permalink();?> ">
